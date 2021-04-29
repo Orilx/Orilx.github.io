@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>笔记 on Dr.Ink的小站</title>
+    <link>https://orilx.gitee.io/tags/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on Dr.Ink的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 30 Apr 2021 01:11:49 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo博客配置</title>
+      <link>https://orilx.gitee.io/p/2021/04/hugo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 30 Apr 2021 01:11:49 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/04/hugo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/</guid>
+      <description>其余部分以后再补全
+安装scoop Scoop是Windows的命令行安装程序，是一个强大的包管理工具
+在powershell中运行命令
+1  Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;)   ps可能会报错
+ PowerShell requires an execution policy in [Unrestricted, RemoteSigned, ByPass] to run Scoop. For example, to set the execution policy to &amp;lsquo;RemoteSigned&amp;rsquo; please run : &amp;lsquo;Set-ExecutionPolicy RemoteSigned -scope CurrentUser&amp;rsquo;
+ 执行
+1  Set-ExecutionPolicy RemoteSigned -scope CurrentUser   之后再执行上面的命令即可
+安装Hugo 执行
+1 2 3  scoop install hugo #或 scoop install hugo-extended   即可
+安装主题 我使用的是dalao制作的Stack主题</description>
+    </item>
+    
+    <item>
+      <title>git的配置</title>
+      <link>https://orilx.gitee.io/p/2021/04/git%E7%9A%84%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 30 Apr 2021 01:09:18 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/04/git%E7%9A%84%E9%85%8D%E7%BD%AE/</guid>
+      <description>其余部分以后再补全 先安装好git和Windows Terminal
+设置用户名和邮箱 git config --global user.name &#39;名称&#39;git config --global user.email &#39;邮箱地址&#39; 生成密钥 ssh -keygen -t rsa -C &#39;邮箱地址&#39; 直接回车三次就行
+配置 打开用户文件夹/.ssh中的id-rsa.pub文件，复制密钥粘贴
+克隆项目/托管本地项目 克隆 直接在要保存项目的文件夹中右键启动Windows Terminal，键入命令
+git clone &amp;lt;项目ssh地址&amp;gt;托管本地项目 在项目文件夹下打开Windows Terminal，键入下面的命令进行初始化
+git init完成后项目文件夹中会出现.git的隐藏文件夹
+在github/gitee中新建一个仓库，复制下ssh地址
+然后在命令行中输入
+git remote add orign &amp;lt;项目ssh地址&amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>

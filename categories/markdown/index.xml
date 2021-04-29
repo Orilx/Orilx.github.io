@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Dr.Ink的小站</title>
+    <link>https://orilx.gitee.io/categories/markdown/</link>
+    <description>Recent content in Markdown on Dr.Ink的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 16 Feb 2021 20:41:00 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown笔记(二)</title>
+      <link>https://orilx.gitee.io/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%BA%8C/</link>
+      <pubDate>Tue, 16 Feb 2021 20:41:00 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%BA%8C/</guid>
+      <description>&lt;h2 id=&#34;六列表&#34;&gt;六、列表&lt;/h2&gt;
+&lt;p&gt;Markdown 支持有序列表和无序列表。&lt;/p&gt;
+&lt;p&gt;无序列表使用星号 &lt;code&gt;*&lt;/code&gt; 、加号 &lt;code&gt;+&lt;/code&gt; 或是减号 &lt;code&gt;-&lt;/code&gt; 作为列表标记，这些标记后面要添加一个空格，然后再填写内容：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Markdown笔记(一)</title>
+      <link>https://orilx.gitee.io/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%B8%80/</link>
+      <pubDate>Tue, 16 Feb 2021 16:41:00 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%B8%80/</guid>
+      <description>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。由约翰·格鲁伯（英语：John Gruber）创建。
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。
+Markdown 编写的文档后缀为 .md 或.markdown。 ——菜鸟教程
+ 一、标题 1.1 使用#号标记 使用#号进行标题分级，注意#号后面要有一个空格。一个#号代表一级标题，两个代表二级，以此类推。
+▼下面是实例
+1 2 3 4 5 6  # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题   效果：1.2 使用 = 和 - 标记一级和二级标题 ▼下面是实例
+1 2 3 4  一级标题 ====== 二级标题 -----   效果：二、段落格式 2.1 段落 在markdown中换行，需要在行末加上两个以上的空格
+▼或者在两行之间空一行表示重新开始一个段落
+1 2 3  text text   效果：text</description>
+    </item>
+    
+  </channel>
+</rss>

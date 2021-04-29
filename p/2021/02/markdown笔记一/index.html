@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。由约翰·格鲁伯（英语：John Gruber）创建。
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。
+Markdown 编写的文档后缀为 .md 或.markdown。 ——菜鸟教程
+ 一、标题 1.1 使用#号标记 使用#号进行标题分级，注意#号后面要有一个空格。一个#号代表一级标题，两个代表二级，以此类推。
+▼下面是实例
+1 2 3 4 5 6  # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题   效果：1.2 使用 = 和 - 标记一级和二级标题 ▼下面是实例
+1 2 3 4  一级标题 ====== 二级标题 -----   效果：二、段落格式 2.1 段落 在markdown中换行，需要在行末加上两个以上的空格
+▼或者在两行之间空一行表示重新开始一个段落
+1 2 3  text text   效果：text'><title>Markdown笔记(一)</title>
+
+<link rel='canonical' href='https://orilx.gitee.io/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%B8%80/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Markdown笔记(一)'>
+<meta property='og:description' content='Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。由约翰·格鲁伯（英语：John Gruber）创建。
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。
+Markdown 编写的文档后缀为 .md 或.markdown。 ——菜鸟教程
+ 一、标题 1.1 使用#号标记 使用#号进行标题分级，注意#号后面要有一个空格。一个#号代表一级标题，两个代表二级，以此类推。
+▼下面是实例
+1 2 3 4 5 6  # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题   效果：1.2 使用 = 和 - 标记一级和二级标题 ▼下面是实例
+1 2 3 4  一级标题 ====== 二级标题 -----   效果：二、段落格式 2.1 段落 在markdown中换行，需要在行末加上两个以上的空格
+▼或者在两行之间空一行表示重新开始一个段落
+1 2 3  text text   效果：text'>
+<meta property='og:url' content='https://orilx.gitee.io/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%B8%80/'>
+<meta property='og:site_name' content='Dr.Ink的小站'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:published_time' content='2021-02-16T16:41:00&#43;00:00'/><meta property='article:modified_time' content='2021-02-16T16:41:00&#43;00:00'/><meta property='og:image' content='https://orilx.gitee.io/img/0.0.jpg' />
+<meta name="twitter:title" content="Markdown笔记(一)">
+<meta name="twitter:description" content="Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。由约翰·格鲁伯（英语：John Gruber）创建。
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。
+Markdown 编写的文档后缀为 .md 或.markdown。 ——菜鸟教程
+ 一、标题 1.1 使用#号标记 使用#号进行标题分级，注意#号后面要有一个空格。一个#号代表一级标题，两个代表二级，以此类推。
+▼下面是实例
+1 2 3 4 5 6  # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题   效果：1.2 使用 = 和 - 标记一级和二级标题 ▼下面是实例
+1 2 3 4  一级标题 ====== 二级标题 -----   效果：二、段落格式 2.1 段落 在markdown中换行，需要在行末加上两个以上的空格
+▼或者在两行之间空一行表示重新开始一个段落
+1 2 3  text text   效果：text"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://orilx.gitee.io/img/0.0.jpg' />
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column compact article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_s_hud312cf2fac231e4fa1e424beef7357f1_131642_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🤖</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://orilx.gitee.io/">Dr.Ink的小站</a></h1>
+        <h2 class="site-description">菜鸡</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E7%A2%8E%E7%A2%8E%E5%BF%B5/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
+  <line x1="13" y1="8" x2="15" y2="8" />
+  <line x1="13" y1="12" x2="15" y2="12" />
+</svg>
+                
+                <span>碎碎念</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>暗色模式</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://orilx.gitee.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" style="background-color: #576DAD; color: #fff;">
+                笔记
+            </a>
+        
+            <a href="/categories/markdown/" style="background-color: #2295AE; color: #fff;">
+                Markdown
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%B8%80/">Markdown笔记(一)</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Feb 16, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <!-- raw HTML omitted -->
+<blockquote>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。由约翰·格鲁伯（英语：John Gruber）创建。<br>
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>
+Markdown 编写的文档后缀为 <code>.md</code> 或<code>.markdown</code>。
+——<a class="link" href="https://www.runoob.com/markdown/md-tutorial.html"  target="_blank" rel="noopener"
+    >菜鸟教程</a></p>
+</blockquote>
+<h2 id="一标题">一、标题</h2>
+<h3 id="11-使用号标记">1.1 使用#号标记</h3>
+<p>使用<code>#</code>号进行标题分级，注意<code>#</code>号后面要有一个空格。一个<code>#</code>号代表一级标题，两个代表二级，以此类推。<br>
+▼下面是实例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gh"># 一级标题
+</span><span class="gh"></span><span class="gu">## 二级标题
+</span><span class="gu">### 三级标题
+</span><span class="gu">#### 四级标题
+</span><span class="gu">##### 五级标题
+</span><span class="gu">###### 六级标题
+</span></code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/md2.gif" alt="cr：菜鸟教程"  /></p>
+<h3 id="12-使用--和---标记一级和二级标题">1.2 使用 = 和 - 标记一级和二级标题</h3>
+<p>▼下面是实例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">一级标题  
+======
+二级标题
+-----
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2019/03/01986C87-7E19-4497-878E-AE996AFC088E.jpg" alt="cr：菜鸟教程"  /></p>
+<h2 id="二段落格式">二、段落格式</h2>
+<h3 id="21-段落">2.1 段落</h3>
+<p>在markdown中换行，需要在行末加上两个以上的<code>空格</code><br>
+▼或者在两行之间空一行表示重新开始一个段落</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">text
+
+text
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+<p>text</p>
+<p>text</p>
+<h3 id="22-文字格式">2.2 文字格式</h3>
+<p>▼在markdown中可以使用三种字体格式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">*斜体*  
+<span class="gs">**粗体**</span>  
+<span class="gs">***粗斜体**</span>*  
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+<p><em>斜体</em><br>
+<strong>粗体</strong><br>
+<em><strong>粗斜体</strong></em></p>
+<p>其中<code>*</code>号可由下划线<code>_</code>代替</p>
+<h3 id="23--其他">2.3  其他</h3>
+<h4 id="231-删除线">2.3.1 删除线</h4>
+<p>▼要在文字上添加删除线，只需在文字两端加上两个<code>~</code>即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">~~删掉~~
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+<p><del>删掉</del></p>
+<h4 id="232-下划线">2.3.2 下划线</h4>
+<p>Markdown 并无下划线的原生语法，因为会和链接的默认样式产生混淆。<br>
+▼可使用HTML语法代替</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="p">&lt;</span><span class="nt">u</span><span class="p">&gt;</span>示例<span class="p">&lt;/</span><span class="nt">u</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+<blockquote>
+<p><!-- raw HTML omitted -->示例<!-- raw HTML omitted --></p>
+</blockquote>
+<h4 id="233-分隔线">2.3.3 分隔线</h4>
+<p>▼可以在一行内使用三个以上的<code>*</code>号来生成分隔线(注意行内不能有其他的字符)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">
+***
+
+</code></pre></td></tr></table>
+</div>
+</div><p>效果： <!-- raw HTML omitted -->(貌似和背景颜色混在一起看不出来了orz)<!-- raw HTML omitted --></p>
+<p>text</p>
+<hr>
+<p>text</p>
+<p>还可以用以下几种写法生成分隔线</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">***
+
+<span class="k">*</span> * *
+
+<span class="gs">****</span>*
+
+<span class="k">-</span> - -
+
+----------
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="234-脚注">2.3.4 脚注</h4>
+<p>脚注是对文本的补充说明<br>
+▼实例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">咱是文本[^咱是脚注]  
+
+[^咱是脚注]: 脚注
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+<p>咱是文本<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="三代码">三、代码</h2>
+<h3 id="31-代码片段">3.1 代码片段</h3>
+<p>▼如果是段落中的代码片段，可以用反引号<code>`</code> 括起来</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="sb">`printf()`</span> 函数
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+<p><code>printf()</code> 函数</p>
+<!-- raw HTML omitted -->
+<p>{% raw %}<!-- raw HTML omitted --><!-- raw HTML omitted -->{% endraw %}<br>
+<!-- raw HTML omitted -->注：带有反引号的代码片段若要用高亮表示，需要用两个反引号括起来：<!-- raw HTML omitted --></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">`` <span class="sb">` `</span>`
+</code></pre></td></tr></table>
+</div>
+</div><p>此处参考：<a href="https://www.cnblogs.com/zengjfgit/p/9006280.html">https://www.cnblogs.com/zengjfgit/p/9006280.html</a></p>
+<h3 id="32-代码区块">3.2 代码区块</h3>
+<p>▼用独立的两行<code>```</code>包裹一段代码来显示一个代码区块</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckNumber</span> 
+<span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span>
+	<span class="o">{</span>
+		<span class="n">CheckNumber</span><span class="o">.</span><span class="na">check</span><span class="o">(</span><span class="n">3</span><span class="o">);</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">check</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> 
+	<span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">%</span><span class="n">2</span><span class="o">==</span><span class="n">0</span><span class="o">)</span>		
+		<span class="o">{</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Yes.&#34;</span><span class="o">);</span>
+		<span class="o">}</span>
+		<span class="k">else</span>
+		<span class="o">{</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;No.&#34;</span><span class="o">);</span>	
+		<span class="o">}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="四链接">四、链接</h2>
+<p>▼使用方法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">[<span class="nt">链接名称</span>](<span class="na">链接地址</span>)
+
+或者
+
+<span class="p">&lt;</span><span class="nt">链接地址</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>例：</strong><!-- raw HTML omitted --></p>
+<p>这是一个链接 <a class="link" href="https://orilx.github.io"  target="_blank" rel="noopener"
+    >Dr.Ink</a>
+<a href="https://orilx.github.io">https://orilx.github.io</a></p>
+<h2 id="五添加图片">五、添加图片</h2>
+<p>语法格式如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">![<span class="nt">alt 属性文本</span>](<span class="na">图片地址</span>)
+
+![<span class="nt">alt 属性文本</span>](<span class="na">图片地址 &#34;可选标题&#34;</span>)
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted -->
+<img src="https://github.com/Orilx/Orilx.github.io/blob/master/img/avatar.jpg?raw=true" alt="Dr.Ink"  /></p>
+<p>markdown目前不支持对图片的大小进行调整，但我们可以通过HTML中的<code>&lt;img&gt;</code> 标签进行调整：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;float:left;border:solid 1px 000;margin:2px;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://github.com/Orilx/Orilx.github.io/blob/master/img/avatar.jpg?raw=true&#34;</span>  <span class="na">width</span><span class="o">=</span><span class="s">&#34;180&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;200&#34;</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p>此处参考: <a class="link" href="https://sobaigu.com/images-side-by-side-in-markdown.html"  target="_blank" rel="noopener"
+    >MarkDown文档中怎么让图片并排展示</a></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>脚注 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/markdown/">markdown</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%BA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown笔记(二)</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/2021/03/%E6%96%B9%E6%B3%95%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">方法的动态参数列表</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/2021/02/java%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java中的异常处理</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/2021/02/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%AC%94%E8%AE%B0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java面向对象笔记</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Dr.Ink的小站
+    </section>
+    
+    <section class="powerby">
+        
+            自言自语 <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

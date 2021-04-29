@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Dr.Ink的小站</title>
+    <link>https://orilx.gitee.io/categories/java/</link>
+    <description>Recent content in Java on Dr.Ink的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 01 Mar 2021 22:50:31 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>方法的动态参数列表</title>
+      <link>https://orilx.gitee.io/p/2021/03/%E6%96%B9%E6%B3%95%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/</link>
+      <pubDate>Mon, 01 Mar 2021 22:50:31 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/03/%E6%96%B9%E6%B3%95%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/</guid>
+      <description>动态参数(可变参数) 动态参数在方法内部,可以当作数组处理
+在调用方法的时候,可以按如下三种方式进行调用:
+ 接收数组 接收一个数据 接收n多个数据  以下面的代码串为例
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  public class ParameterTest { public static void main(String[] args) { String pnames[]={&amp;#34;Steve&amp;#34;,&amp;#34;Amy&amp;#34;,&amp;#34;Alex&amp;#34;}; ParamaterTest.Select(pnames); //方式1  ParamaterTest.Select(&amp;#34;Steve&amp;#34;); //方式2  ParamaterTest.Select(&amp;#34;Steve&amp;#34;,&amp;#34;Amy&amp;#34;,&amp;#34;Alex&amp;#34;); //方式3  } public static void Select(String...pnames) { for(String name:pnames) { System.out.println(&amp;#34;Select &amp;#34;+name); } } }   分析 {% raw %}</description>
+    </item>
+    
+    <item>
+      <title>Java中的异常处理</title>
+      <link>https://orilx.gitee.io/p/2021/02/java%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
+      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/02/java%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
+      <description>程序设计中异常(Exception)与错误(Error)的区别  错误：语法层面的问题，由于语法应用不当或是编写不当导致代码无法编译运行 异常：由于逻辑设计上的思维错误，导致代码编译成功之后到运行期间，运行结果与设计意图不一致  以下面这段代码为例
+1 2 3 4 5 6 7 8 9 10 11 12  public static void main(String[] args) { Maths.div(); } private static void div() { int x=10; int y=0; int z=x/y; System.out.println(&amp;#34;z=&amp;#34;+z); }   上述代码在运行的时候会报错
+{% raw %}
+Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.ArithmeticException: / by zero
+at com.openedu.Maths.div(Maths.java:146)
+at com.openedu.Maths.main(Maths.java:7){% raw %}
+下面我们用新的方法重写这段代码
+带有完整的异常处理的方法 先上代码
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  private static void div2() { try { int x=10; int y=0; int z=x/y; System.</description>
+    </item>
+    
+    <item>
+      <title>Java面向对象笔记</title>
+      <link>https://orilx.gitee.io/p/2021/02/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 20 Feb 2021 15:06:00 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/02/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%AC%94%E8%AE%B0/</guid>
+      <description>基本世界观 面向对象认为：客观世界就是基于一横一纵的两种关系构成的平面世界。
+纵向演进 同一物种，在繁衍生息过程中，不断壮大分裂，形成不同的种群，体现的就是物种的生生不息的纵向演化过程。
+每一次演进都是对已有物种重新分类的过程，比如生物学上的分类方式界门纲目科属种等，都是事物发展细分过程的体系。
+横向联系 同一物种的不同种群，或不同物种之间的联合和竞争
+ 联合关系：A调用B 竞争关系：当A类存在后，经过实践证明，应用在某些环境下不是很好或存在隐患，于是开发新版本的替代方案，在A的不良应用环境中，取代之。  构成纵向演进和横向联系的主体就是对象。
+对象：客观世界的主体 对象也叫实体。
+在面向对象看来，客观世界的最小构成单元就是对象。一切事物都可以看作是对象，比如：一本书、一个人、一滴水、一个妖怪……
+简而言之，实体即对象。
+实体也是由两部分构成的，一个叫状态，一个叫行为，并且可以通过行为可以影响状态的改变。这就是面向对象编程的第一思想根基。
+即：行为影响状态，状态不可以自我更新。
+行为影响状态改变的三重含义  一个实体自身的行为，可以影响自身状态的改变，比如吃饭的行为影响饥饿状态的改变。 一个对象的行为可以影响其他对象状态的改变，比如老师讲课影响学生们清醒状态的改变。 状态的改变依赖于行为的发生，没有行为发生，状态不变，即状态不可以自我更新。  语法上的问题 没有对象级文件的原因 根据面向对象的理论体系，对象才是核心，但是，到目前为止，我们创建的都是类。
+在语法层面上就没有对象这一级的文件。比如在Eclipse中新建文件的选项中，就没有对象这一语法单元。原因是什么呢？
+对象的数量级，理论上是无穷的。针对无穷数量的东西，无法以可控的手段落实到语法单元层面，也无法维护。
+基于上述问题，一般采用物以类聚的原则，以类别为单位管理同类事物。这就是以类为基础语法单元的原因。
+类 类是面向对象的基本概念，是具有相同特征的对象的集合。
+概念解读 从任意主观角度去看，只要诸多对象存在相同的特征，就可以放到一起，作为一类事物进行统一管理。它体现的就是物以类聚的概念。
+类是一个集合的概念，表示的是群体特征。
+对象是这一类事物中的一个个体，是一类事物的一个实例。
+怎么设计类 思维的原点 任何思维模式都会有一个起点，由此开始向外衍射，逐渐形成理论体系。而最恰当的思维原点，就是事物的本源。从源头出发思考问题，往往能理清事物的发展脉络，更容易构建体系化的理论。即：一切思维，起始于物质本源，宜以便抓住源头，才能思考问题。
+面向对象思维原点 既然面向对象认为，客观世界最小单元是对象，因此一切理论的分析，都应该从对象开始。设计类自然也不例外，必须建立在对对象的分析这一基础上。
+设计的实现 面向对象程序设计 所谓的面向对象程序设计，就是分析客观实体的状态和行为抽象共性，形成类。
+ 通过封装定义并区分事物的类别。 通过继承描述事物的纵向演进，描述类别细分。 通过多态描述基于物竞天择的物种多样性。 通过类（或对象）之间的调用，描述事物之间的横向联系。  类与类型 在Java中，定义一个类，就相当于定义了一种新的数据类型。对象可以看作是基于自定义类型创造的标准件。
+方法剖析 方法是什么 方法：对应事物的行为，封装了类对某一事件的处理过程。
+方法剖析的范围：
+ 参数分析 返回值分析 重载分析  三驾马车 方法对应行为，事物的行为可能依赖于外界信息，参数用以收集为执行该行为所需要的外部信息；一个行为执行完毕以后，可能需要将执行结果通知给其他事物，这个要靠返回值来完成。
+简而言之：参数用以将数据带入方法，返回值用以将数据带出方法。
+参数分析 参数 代表方法执行期间接收的外部数据，可以是任意数据类型。比如int类型，String类型，以及自己定义的类型。
+参数的传递  值传递：方法内部对参数进行了改变，如果原始变量不变就是值传递（传递八大基本类型和String类型）。 引用传递：方法内部对参数进行了改变，如果原始变量的状态一并发生了变化，就是引用传递。  除了值传递之外的参数传递都是引用传递。</description>
+    </item>
+    
+  </channel>
+</rss>
