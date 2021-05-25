@@ -6,16 +6,16 @@
     <description>Recent content in git on Dr.Ink的小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Apr 2021 01:09:18 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 May 2021 00:51:18 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git的配置</title>
-      <link>https://orilx.gitee.io/p/2021/04/git%E7%9A%84%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Fri, 30 Apr 2021 01:09:18 +0000</pubDate>
+      <link>https://orilx.gitee.io/p/2021/05/git%E7%9A%84%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 26 May 2021 00:51:18 +0000</pubDate>
       
-      <guid>https://orilx.gitee.io/p/2021/04/git%E7%9A%84%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://orilx.gitee.io/p/2021/05/git%E7%9A%84%E9%85%8D%E7%BD%AE/</guid>
       <description>其余部分以后再补全 先安装好git和Windows Terminal
-设置用户名和邮箱 git config --global user.name &#39;名称&#39;git config --global user.email &#39;邮箱地址&#39; 生成密钥 ssh -keygen -t rsa -C &#39;邮箱地址&#39; 直接回车三次就行
-配置 打开用户文件夹/.ssh中的id-rsa.pub文件，复制密钥粘贴
+设置用户名和邮箱 git config --global user.name &#39;名称&#39;git config --global user.email &#39;邮箱地址&#39; 生成密钥 ssh-keygen -t rsa -C &#39;邮箱地址&#39; 直接回车三次就行
+配置 打开用户文件夹/.ssh中的id-rsa.pub文件，复制密钥粘贴到GitHub账户Account settings -&amp;gt; SSH and GPG keys -&amp;gt; SSH keys 中
 克隆项目/托管本地项目 克隆 直接在要保存项目的文件夹中右键启动Windows Terminal，键入命令
 git clone &amp;lt;项目ssh地址&amp;gt;托管本地项目 在项目文件夹下打开Windows Terminal，键入下面的命令进行初始化
 git init完成后项目文件夹中会出现.git的隐藏文件夹

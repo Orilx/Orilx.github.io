@@ -13,6 +13,8 @@
 <meta name="twitter:title" content="git的配置">
 <meta name="twitter:description" content="咕咕咕"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://orilx.gitee.io/img/0.0.jpg' />
+    <link rel="shortcut icon" href="img/favicon_1.svg" />
+
     </head>
     <body class="">
     <script>
@@ -240,10 +242,10 @@
 <pre><code>git config --global user.name '名称'
 git config --global user.email '邮箱地址'  
 </code></pre><h2 id="生成密钥">生成密钥</h2>
-<pre><code>ssh -keygen -t rsa -C '邮箱地址' 
+<pre><code>ssh-keygen -t rsa -C '邮箱地址' 
 </code></pre><p>直接回车三次就行</p>
 <h2 id="配置">配置</h2>
-<p>打开<code>用户文件夹/.ssh</code>中的<code>id-rsa.pub</code>文件，复制密钥粘贴</p>
+<p>打开<code>用户文件夹/.ssh</code>中的<code>id-rsa.pub</code>文件，复制密钥粘贴到GitHub账户<code>Account settings</code> -&gt; <code>SSH and GPG keys</code> -&gt; <code>SSH keys</code> 中</p>
 <h2 id="克隆项目托管本地项目">克隆项目/托管本地项目</h2>
 <h3 id="克隆">克隆</h3>
 <p>直接在要保存项目的文件夹中右键启动Windows Terminal，键入命令</p>

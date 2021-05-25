@@ -27,11 +27,9 @@
       <guid>https://orilx.gitee.io/p/2021/02/java%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
       <description>程序设计中异常(Exception)与错误(Error)的区别  错误：语法层面的问题，由于语法应用不当或是编写不当导致代码无法编译运行 异常：由于逻辑设计上的思维错误，导致代码编译成功之后到运行期间，运行结果与设计意图不一致  以下面这段代码为例
 1 2 3 4 5 6 7 8 9 10 11 12  public static void main(String[] args) { Maths.div(); } private static void div() { int x=10; int y=0; int z=x/y; System.out.println(&amp;#34;z=&amp;#34;+z); }   上述代码在运行的时候会报错
-{% raw %}
 Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.ArithmeticException: / by zero
 at com.openedu.Maths.div(Maths.java:146)
-at com.openedu.Maths.main(Maths.java:7){% raw %}
-下面我们用新的方法重写这段代码
+at com.openedu.Maths.main(Maths.java:7)下面我们用新的方法重写这段代码
 带有完整的异常处理的方法 先上代码
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  private static void div2() { try { int x=10; int y=0; int z=x/y; System.</description>
     </item>

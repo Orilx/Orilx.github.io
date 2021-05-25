@@ -6,13 +6,30 @@
     <description>Recent content in Posts on Dr.Ink的小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Apr 2021 01:11:49 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 May 2021 00:51:18 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git的配置</title>
+      <link>https://orilx.gitee.io/p/2021/05/git%E7%9A%84%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 26 May 2021 00:51:18 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/05/git%E7%9A%84%E9%85%8D%E7%BD%AE/</guid>
+      <description>其余部分以后再补全 先安装好git和Windows Terminal
+设置用户名和邮箱 git config --global user.name &#39;名称&#39;git config --global user.email &#39;邮箱地址&#39; 生成密钥 ssh-keygen -t rsa -C &#39;邮箱地址&#39; 直接回车三次就行
+配置 打开用户文件夹/.ssh中的id-rsa.pub文件，复制密钥粘贴到GitHub账户Account settings -&amp;gt; SSH and GPG keys -&amp;gt; SSH keys 中
+克隆项目/托管本地项目 克隆 直接在要保存项目的文件夹中右键启动Windows Terminal，键入命令
+git clone &amp;lt;项目ssh地址&amp;gt;托管本地项目 在项目文件夹下打开Windows Terminal，键入下面的命令进行初始化
+git init完成后项目文件夹中会出现.git的隐藏文件夹
+在github/gitee中新建一个仓库，复制下ssh地址
+然后在命令行中输入
+git remote add orign &amp;lt;项目ssh地址&amp;gt;</description>
+    </item>
+    
     <item>
       <title>Hugo博客配置</title>
-      <link>https://orilx.gitee.io/p/2021/04/hugo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Fri, 30 Apr 2021 01:11:49 +0000</pubDate>
+      <link>https://orilx.gitee.io/p/2021/05/hugo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 26 May 2021 00:47:00 +0000</pubDate>
       
-      <guid>https://orilx.gitee.io/p/2021/04/hugo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://orilx.gitee.io/p/2021/05/hugo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/</guid>
       <description>其余部分以后再补全
 安装scoop Scoop是Windows的命令行安装程序，是一个强大的包管理工具
 在powershell中运行命令
@@ -22,24 +39,7 @@
 1  Set-ExecutionPolicy RemoteSigned -scope CurrentUser   之后再执行上面的命令即可
 安装Hugo 执行
 1 2 3  scoop install hugo #或 scoop install hugo-extended   即可
-安装主题 我使用的是dalao制作的Stack主题</description>
-    </item>
-    
-    <item>
-      <title>git的配置</title>
-      <link>https://orilx.gitee.io/p/2021/04/git%E7%9A%84%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Fri, 30 Apr 2021 01:09:18 +0000</pubDate>
-      
-      <guid>https://orilx.gitee.io/p/2021/04/git%E7%9A%84%E9%85%8D%E7%BD%AE/</guid>
-      <description>其余部分以后再补全 先安装好git和Windows Terminal
-设置用户名和邮箱 git config --global user.name &#39;名称&#39;git config --global user.email &#39;邮箱地址&#39; 生成密钥 ssh -keygen -t rsa -C &#39;邮箱地址&#39; 直接回车三次就行
-配置 打开用户文件夹/.ssh中的id-rsa.pub文件，复制密钥粘贴
-克隆项目/托管本地项目 克隆 直接在要保存项目的文件夹中右键启动Windows Terminal，键入命令
-git clone &amp;lt;项目ssh地址&amp;gt;托管本地项目 在项目文件夹下打开Windows Terminal，键入下面的命令进行初始化
-git init完成后项目文件夹中会出现.git的隐藏文件夹
-在github/gitee中新建一个仓库，复制下ssh地址
-然后在命令行中输入
-git remote add orign &amp;lt;项目ssh地址&amp;gt;</description>
+安装主题 我使用的是jimmycaidalao制作的Stack主题</description>
     </item>
     
     <item>
@@ -71,11 +71,9 @@ git remote add orign &amp;lt;项目ssh地址&amp;gt;</description>
       <guid>https://orilx.gitee.io/p/2021/02/java%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
       <description>程序设计中异常(Exception)与错误(Error)的区别  错误：语法层面的问题，由于语法应用不当或是编写不当导致代码无法编译运行 异常：由于逻辑设计上的思维错误，导致代码编译成功之后到运行期间，运行结果与设计意图不一致  以下面这段代码为例
 1 2 3 4 5 6 7 8 9 10 11 12  public static void main(String[] args) { Maths.div(); } private static void div() { int x=10; int y=0; int z=x/y; System.out.println(&amp;#34;z=&amp;#34;+z); }   上述代码在运行的时候会报错
-{% raw %}
 Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.ArithmeticException: / by zero
 at com.openedu.Maths.div(Maths.java:146)
-at com.openedu.Maths.main(Maths.java:7){% raw %}
-下面我们用新的方法重写这段代码
+at com.openedu.Maths.main(Maths.java:7)下面我们用新的方法重写这段代码
 带有完整的异常处理的方法 先上代码
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  private static void div2() { try { int x=10; int y=0; int z=x/y; System.</description>
     </item>
@@ -157,6 +155,16 @@ hexo博客又崩了
 2021-02-14
 折腾了一整天，终于把这个博客配置的差不多了
 剩下的细节以后再搞吧 (._. )&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://orilx.gitee.io/p/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/1/01/</guid>
+      <description>静态页面生成器
+docsify/gitbook 文档适用</description>
     </item>
     
   </channel>

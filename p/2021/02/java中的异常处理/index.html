@@ -13,6 +13,8 @@
 <meta name="twitter:title" content="Java中的异常处理">
 <meta name="twitter:description" content="意料之外的情况就是异常"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://orilx.gitee.io/img/0.0.jpg' />
+    <link rel="shortcut icon" href="img/favicon_1.svg" />
+
     </head>
     <body class="">
     <script>
@@ -274,14 +276,10 @@
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>上述代码在运行的时候会报错<br>
-{% raw %}</p>
-<!-- raw HTML omitted -->
+</div><p>上述代码在运行的时候会报错</p>
 <p><!-- raw HTML omitted -->Exception in thread &ldquo;main&rdquo; java.lang.ArithmeticException: / by zero<br>
 at com.openedu.Maths.div(Maths.java:146)<br>
-at com.openedu.Maths.main(Maths.java:7)<!-- raw HTML omitted --><br>
-{% raw %}</p>
-<!-- raw HTML omitted -->
+at com.openedu.Maths.main(Maths.java:7)<!-- raw HTML omitted --></p>
 <p>下面我们用新的方法重写这段代码</p>
 <h2 id="带有完整的异常处理的方法">带有完整的异常处理的方法</h2>
 <p>先上代码</p>
@@ -364,8 +362,6 @@ try中任意一行代码一旦引发异常，从引发异常的这一行开始�
 <li>当方法引发异常的时候，没有通知main</li>
 <li>违背软件开发中组件的职责划分</li>
 </ol>
-<p>{% raw %}</p>
-<!-- raw HTML omitted -->
 <p><strong>一个软件系统中，最小角色划分如下：</strong></p>
 <ul>
 <li>调用者：
@@ -381,8 +377,6 @@ try中任意一行代码一旦引发异常，从引发异常的这一行开始�
 </ol>
 </li>
 </ul>
-<p>{% raw %}</p>
-<!-- raw HTML omitted -->
 <p>所以方法内部捕捉异常并直接处理，然后不向调用者汇报是错误的做法</p>
 <h2 id="带有异常通知的异常处理体系">带有异常通知的异常处理体系</h2>
 <div class="highlight"><div class="chroma">
@@ -464,9 +458,8 @@ try中任意一行代码一旦引发异常，从引发异常的这一行开始�
 </code></pre></td></tr></table>
 </div>
 </div><p>输出结果：<br>
-{% raw %}</p>
 <!-- raw HTML omitted -->
-<p><strong>div3中捕捉的异常</strong><br>
+<strong>div3中捕捉的异常</strong><br>
 java.lang.ArithmeticException: / by zero<br>
 at com.openedu.Maths.div3(Maths.java:39)<br>
 at com.openedu.Maths.main(Maths.java:11)<br>
@@ -475,16 +468,10 @@ java.lang.ArithmeticException: / by zero<br>
 <strong>main方法捕捉异常</strong><br>
 at com.openedu.Maths.div3(Maths.java:39)<br>
 at com.openedu.Maths.main(Maths.java:11)<br>
-<!-- raw HTML omitted -->
-{% raw %}</p>
-<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
 <h3 id="细节分析">细节分析</h3>
-<p>{% raw %}</p>
-<!-- raw HTML omitted -->
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --><code>throws Exception</code> &mdash; 声明异常 <!-- raw HTML omitted --><!-- raw HTML omitted --><br>
-告诉调用者，本方法执行期间可能会出现异常，如果调用者调用本方法，请自行捕捉本方法可能出现的异常<br>
-{% raw %}</p>
-<!-- raw HTML omitted -->
+告诉调用者，本方法执行期间可能会出现异常，如果调用者调用本方法，请自行捕捉本方法可能出现的异常</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
