@@ -13,7 +13,10 @@
       <pubDate>Wed, 26 May 2021 00:51:18 +0000</pubDate>
       
       <guid>https://orilx.gitee.io/p/2021/05/git%E7%9A%84%E9%85%8D%E7%BD%AE/</guid>
-      <description>其余部分以后再补全 先安装好git和Windows Terminal
+      <description>其余部分以后再补全
+先安装好git和Windows Terminal
+为啥用Windows Terminal？
+因为好看
 设置用户名和邮箱 git config --global user.name &#39;名称&#39;git config --global user.email &#39;邮箱地址&#39; 生成密钥 ssh-keygen -t rsa -C &#39;邮箱地址&#39; 直接回车三次就行
 配置 打开用户文件夹/.ssh中的id-rsa.pub文件，复制密钥粘贴到GitHub账户Account settings -&amp;gt; SSH and GPG keys -&amp;gt; SSH keys 中
 克隆项目/托管本地项目 克隆 直接在要保存项目的文件夹中右键启动Windows Terminal，键入命令
@@ -21,7 +24,8 @@ git clone &amp;lt;项目ssh地址&amp;gt;托管本地项目 在项目文件夹�
 git init完成后项目文件夹中会出现.git的隐藏文件夹
 在github/gitee中新建一个仓库，复制下ssh地址
 然后在命令行中输入
-git remote add orign &amp;lt;项目ssh地址&amp;gt;</description>
+git remote add orign &amp;lt;项目ssh地址&amp;gt;或手动修改在.git文件夹下的config文件
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  #参考 [core] repositoryformatversion = 0 filemode = false bare = false logallrefupdates = true symlinks = false ignorecase = true [remote &amp;#34;origin&amp;#34;] url = git@gitee.</description>
     </item>
     
   </channel>

@@ -236,8 +236,10 @@
 </header>
 
     <section class="article-content">
-    <p><del>其余部分以后再补全</del>
-先安装好git和Windows Terminal</p>
+    <p><del>其余部分以后再补全</del><br>
+先安装好git和Windows Terminal<br>
+为啥用Windows Terminal？<br>
+<del>因为好看</del></p>
 <h2 id="设置用户名和邮箱">设置用户名和邮箱</h2>
 <pre><code>git config --global user.name '名称'
 git config --global user.email '邮箱地址'  
@@ -257,7 +259,50 @@ git config --global user.email '邮箱地址'
 <p>在github/gitee中新建一个仓库，复制下ssh地址</p>
 <p>然后在命令行中输入</p>
 <pre><code>git remote add orign &lt;项目ssh地址&gt;
-</code></pre>
+</code></pre><p>或手动修改在<code>.git</code>文件夹下的<code>config</code>文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#参考</span>
+<span class="o">[</span>core<span class="o">]</span>
+	<span class="nv">repositoryformatversion</span> <span class="o">=</span> <span class="m">0</span>
+	<span class="nv">filemode</span> <span class="o">=</span> <span class="nb">false</span>
+	<span class="nv">bare</span> <span class="o">=</span> <span class="nb">false</span>
+	<span class="nv">logallrefupdates</span> <span class="o">=</span> <span class="nb">true</span>
+	<span class="nv">symlinks</span> <span class="o">=</span> <span class="nb">false</span>
+	<span class="nv">ignorecase</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="o">[</span>remote <span class="s2">&#34;origin&#34;</span><span class="o">]</span>
+	<span class="nv">url</span> <span class="o">=</span> git@gitee.com:orilx/Orilx.git
+	<span class="nv">fetch</span> <span class="o">=</span> +refs/heads/*:refs/remotes/origin/*
+<span class="o">[</span>remote <span class="s2">&#34;origin&#34;</span><span class="o">]</span>
+	<span class="nv">url</span> <span class="o">=</span> git@github.com:Orilx/Orilx.github.io.git
+	<span class="nv">fetch</span> <span class="o">=</span> +refs/heads/*:refs/remotes/origin/*
+<span class="o">[</span>branch <span class="s2">&#34;master&#34;</span><span class="o">]</span>
+	<span class="nv">remote</span> <span class="o">=</span> origin
+	<span class="nv">merge</span> <span class="o">=</span> refs/heads/master
+
+</code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
