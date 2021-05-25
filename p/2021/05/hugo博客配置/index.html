@@ -292,15 +292,43 @@ scoop install hugo-extended
 </div>
 </div><p>具体配置参考<a class="link" href="https://docs.stack.jimmycai.com/v/zh-cn/"  target="_blank" rel="noopener"
     >配置文档</a></p>
-<h2 id="部分hugo快捷键">部分hugo快捷键</h2>
+<h2 id="部分hugo命令">部分hugo命令</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo    <span class="c1">#在默认文件夹中生成静态网页</span>
-hugo server    <span class="c1">#生成本地预览网页(修改文章时可以动态刷新)</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">hugo
+<span class="c1">#在默认文件夹中生成静态网页</span>
+hugo server
+<span class="c1">#生成本地预览网页(修改文章时可以动态刷新)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="部分git命令">部分git命令</h2>
+<p>在public文件夹中执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git init
+<span class="c1">#初始化(在第一次提交时执行，可以在.git文件夹中修改配置文件)</span>
+git add .
+<span class="c1">#将当前目录下所有文件提交到暂存区(注意后面有一个点)</span>
+git commit -m <span class="o">[</span>message<span class="o">]</span>
+<span class="c1">#将暂存区代码提交到仓库区并添加备注</span>
+git push
+<span class="c1">#提交代码到远程仓库</span>
 </code></pre></td></tr></table>
 </div>
 </div>
