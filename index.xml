@@ -66,10 +66,10 @@ git config --global user.email &#39;邮箱地址&#39;
 	&lt;span class=&#34;nv&#34;&gt;logallrefupdates&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
 	&lt;span class=&#34;nv&#34;&gt;symlinks&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt;
 	&lt;span class=&#34;nv&#34;&gt;ignorecase&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote &lt;span class=&#34;s2&#34;&gt;&amp;#34;origin&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote &lt;span class=&#34;s2&#34;&gt;&amp;#34;gitee&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 	&lt;span class=&#34;nv&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; git@gitee.com:orilx/Orilx.git
 	&lt;span class=&#34;nv&#34;&gt;fetch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; +refs/heads/*:refs/remotes/origin/*
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote &lt;span class=&#34;s2&#34;&gt;&amp;#34;origin&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote &lt;span class=&#34;s2&#34;&gt;&amp;#34;github&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 	&lt;span class=&#34;nv&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; git@github.com:Orilx/Orilx.github.io.git
 	&lt;span class=&#34;nv&#34;&gt;fetch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; +refs/heads/*:refs/remotes/origin/*
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch &lt;span class=&#34;s2&#34;&gt;&amp;#34;master&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;

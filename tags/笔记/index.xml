@@ -25,7 +25,7 @@ git init完成后项目文件夹中会出现.git的隐藏文件夹
 在github/gitee中新建一个仓库，复制下ssh地址
 然后在命令行中输入
 git remote add orign &amp;lt;项目ssh地址&amp;gt;或手动修改在.git文件夹下的config文件
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  #参考 [core] repositoryformatversion = 0 filemode = false bare = false logallrefupdates = true symlinks = false ignorecase = true [remote &amp;#34;origin&amp;#34;] url = git@gitee.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  #参考 [core] repositoryformatversion = 0 filemode = false bare = false logallrefupdates = true symlinks = false ignorecase = true [remote &amp;#34;gitee&amp;#34;] url = git@gitee.</description>
     </item>
     
     <item>
