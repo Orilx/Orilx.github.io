@@ -6,20 +6,11 @@
     <description>Recent content in Categories on Dr.Ink的小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 26 May 2021 00:51:18 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>胡乱记记</title>
-      <link>https://orilx.gitee.io/categories/%E8%83%A1%E4%B9%B1%E8%AE%B0%E8%AE%B0/</link>
-      <pubDate>Wed, 26 May 2021 00:51:18 +0000</pubDate>
-      
-      <guid>https://orilx.gitee.io/categories/%E8%83%A1%E4%B9%B1%E8%AE%B0%E8%AE%B0/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Thu, 27 May 2021 18:07:37 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java</title>
       <link>https://orilx.gitee.io/categories/java/</link>
-      <pubDate>Mon, 01 Mar 2021 22:50:31 +0000</pubDate>
+      <pubDate>Thu, 27 May 2021 18:07:37 +0800</pubDate>
       
       <guid>https://orilx.gitee.io/categories/java/</guid>
       <description></description>
@@ -28,9 +19,18 @@
     <item>
       <title>笔记</title>
       <link>https://orilx.gitee.io/categories/%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Mon, 01 Mar 2021 22:50:31 +0000</pubDate>
+      <pubDate>Thu, 27 May 2021 18:07:37 +0800</pubDate>
       
       <guid>https://orilx.gitee.io/categories/%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>胡乱记记</title>
+      <link>https://orilx.gitee.io/categories/%E8%83%A1%E4%B9%B1%E8%AE%B0%E8%AE%B0/</link>
+      <pubDate>Wed, 26 May 2021 00:51:18 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/categories/%E8%83%A1%E4%B9%B1%E8%AE%B0%E8%AE%B0/</guid>
       <description></description>
     </item>
     

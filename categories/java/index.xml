@@ -6,7 +6,20 @@
     <description>Recent content in Java on Dr.Ink的小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Mar 2021 22:50:31 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 May 2021 18:07:37 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java笔记</title>
+      <link>https://orilx.gitee.io/p/2021/05/java%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 27 May 2021 18:07:37 +0800</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/05/java%E7%AC%94%E8%AE%B0/</guid>
+      <description>继承 子类不能直接访问继承自父类发私有成员，但是可以通过继承自父类的有访问权限的方法或通过调用父类的构造子，间接访问这些私有成员。
+super  第一种用法：在子类中调用父类的构造子
+此时super必须是子类构造体中第一行可执行代码 第二种用法：在子类中调用，实现被子类重写的父类方法  final  作用于类，禁止类被继承 作用于方法，禁止被子类重写 作用于属性，禁止属性被修改，相当于定义常量 *final修饰的属性如果没有进行初始化，那么必须在构造子中对该属性进行一次初始化 作用于参数，可以有效防止方法内部对参数的二次赋值，保证数值的纯净度。  类的实例化过程 向上查找、向下创建
+ 向上查找：从当前类开始逐级向上，直到找到最终父类为止。
+*通过构造子内部super调用，完成逐级向上的查找过程（直到Object类） 向下创建：从Object类开始逐级实例化  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35  public class ClassA { public ClassA() { //	super(); 	System.out.println(&amp;#34;New Instance of ClassA.</description>
+    </item>
+    
     <item>
       <title>方法的动态参数列表</title>
       <link>https://orilx.gitee.io/p/2021/03/%E6%96%B9%E6%B3%95%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/</link>

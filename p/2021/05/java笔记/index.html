@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='六、列表 Markdown 支持有序列表和无序列表。
-无序列表使用星号 * 、加号 &#43; 或是减号 - 作为列表标记，这些标记后面要添加一个空格，然后再填写内容：
-'><title>Markdown笔记(二)</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Java笔记'><title>Java笔记</title>
 
-<link rel='canonical' href='https://orilx.gitee.io/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%BA%8C/'>
+<link rel='canonical' href='https://orilx.gitee.io/p/2021/05/java%E7%AC%94%E8%AE%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Markdown笔记(二)'>
-<meta property='og:description' content='六、列表 Markdown 支持有序列表和无序列表。
-无序列表使用星号 * 、加号 &#43; 或是减号 - 作为列表标记，这些标记后面要添加一个空格，然后再填写内容：
-'>
-<meta property='og:url' content='https://orilx.gitee.io/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%BA%8C/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Java笔记'>
+<meta property='og:description' content='Java笔记'>
+<meta property='og:url' content='https://orilx.gitee.io/p/2021/05/java%E7%AC%94%E8%AE%B0/'>
 <meta property='og:site_name' content='Dr.Ink的小站'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:published_time' content='2021-02-16T20:41:00&#43;00:00'/><meta property='article:modified_time' content='2021-02-16T20:41:00&#43;00:00'/><meta property='og:image' content='https://orilx.gitee.io/img/0.0.jpg' />
-<meta name="twitter:title" content="Markdown笔记(二)">
-<meta name="twitter:description" content="六、列表 Markdown 支持有序列表和无序列表。
-无序列表使用星号 * 、加号 &#43; 或是减号 - 作为列表标记，这些标记后面要添加一个空格，然后再填写内容：
-"><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:published_time' content='2021-05-27T18:07:37&#43;08:00'/><meta property='article:modified_time' content='2021-05-27T18:07:37&#43;08:00'/><meta property='og:image' content='https://orilx.gitee.io/img/0.0.jpg' />
+<meta name="twitter:title" content="Java笔记">
+<meta name="twitter:description" content="Java笔记"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://orilx.gitee.io/img/0.0.jpg' />
     <link rel="shortcut icon" href="img/favicon_1.svg" />
 
@@ -217,17 +211,21 @@
                 笔记
             </a>
         
-            <a href="/categories/markdown/" style="background-color: #2295AE; color: #fff;">
-                Markdown
+            <a href="/categories/java/" style="background-color: #D59313; color: #fff;">
+                Java
             </a>
         
     </header>
     
 
     <h2 class="article-title">
-        <a href="/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%BA%8C/">Markdown笔记(二)</a>
+        <a href="/p/2021/05/java%E7%AC%94%E8%AE%B0/">Java笔记</a>
     </h2>
 
+    
+    <h3 class="article-subtitle">
+        Java笔记
+    </h3>
     <footer class="article-time">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -237,14 +235,34 @@
 
 
 
-        <time class="article-time--published">Feb 16, 2021</time>
+        <time class="article-time--published">May 27, 2021</time>
     </footer></div>
 </header>
 
     <section class="article-content">
-    <h2 id="六列表">六、列表</h2>
-<p>Markdown 支持有序列表和无序列表。</p>
-<p>无序列表使用星号 <code>*</code> 、加号 <code>+</code> 或是减号 <code>-</code> 作为列表标记，这些标记后面要添加一个空格，然后再填写内容：</p>
+    <h2 id="继承">继承</h2>
+<p>子类不能直接访问继承自父类发私有成员，但是可以通过继承自父类的有访问权限的方法或通过调用父类的构造子，间接访问这些私有成员。</p>
+<h3 id="super">super</h3>
+<ul>
+<li>第一种用法：在子类中调用父类的构造子<br>
+此时super必须是子类构造体中第一行可执行代码</li>
+<li>第二种用法：在子类中调用，实现被子类重写的父类方法</li>
+</ul>
+<h2 id="final">final</h2>
+<ul>
+<li>作用于类，禁止类被继承</li>
+<li>作用于方法，禁止被子类重写</li>
+<li>作用于属性，禁止属性被修改，相当于定义常量
+*<em><code>final</code>修饰的属性如果没有进行初始化，那么必须在构造子中对该属性进行一次初始化</em></li>
+<li>作用于参数，可以有效防止方法内部对参数的二次赋值，保证数值的纯净度。</li>
+</ul>
+<h2 id="类的实例化过程">类的实例化过程</h2>
+<p>向上查找、向下创建</p>
+<ul>
+<li>向上查找：从当前类开始逐级向上，直到找到最终父类为止。<br>
+*<em>通过构造子内部<code>super</code>调用，完成逐级向上的查找过程（直到<code>Object</code>类）</em></li>
+<li>向下创建：从<code>Object</code>类开始逐级实例化</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -258,258 +276,90 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">*</span> 第一项
-<span class="k">*</span> 第二项
-<span class="k">*</span> 第三项
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassA</span> 
+<span class="o">{</span>
+	<span class="kd">public</span> <span class="nf">ClassA</span><span class="o">()</span> 
+	<span class="o">{</span>
+<span class="c1">//		super();
+</span><span class="c1"></span>		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;New Instance of ClassA......&#34;</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
 
-+ 第一项
-+ 第二项
-+ 第三项
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassB</span> <span class="kd">extends</span> <span class="n">ClassA</span> 
+<span class="o">{</span>
+	<span class="kd">public</span> <span class="nf">ClassB</span><span class="o">()</span> 
+	<span class="o">{</span>
+<span class="c1">//		super();
+</span><span class="c1"></span>		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;New Instance of ClassB......&#34;</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
 
-<span class="k">-</span> 第一项
-<span class="k">-</span> 第二项
-<span class="k">-</span> 第三项
+<span class="kd">public</span> <span class="cm">/*final*/</span> <span class="kd">class</span> <span class="nc">ClassC</span> <span class="kd">extends</span> <span class="n">ClassB</span>
+<span class="o">{</span>
+	<span class="kd">public</span> <span class="nf">ClassC</span><span class="o">()</span> 
+	<span class="o">{</span>
+<span class="c1">//		super();        //调用父类的无参构造子
+</span><span class="c1"></span>		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;New Instance of ClassC......&#34;</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> 
+<span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> 
+	<span class="o">{</span>
+		<span class="c1">//实例化ClassC
+</span><span class="c1"></span>		<span class="n">ClassD</span> <span class="n">cd</span><span class="o">=</span><span class="k">new</span> <span class="n">ClassC</span><span class="o">();</span>
+	<span class="o">}</span>
+<span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<p>有序列表使用数字并加上 <code>.</code> 号来表示，如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">1.</span> 第一项
-<span class="k">2.</span> 第二项
-<span class="k">3.</span> 第三项
-</code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<h3 id="列表嵌套">列表嵌套</h3>
-<p>要实现列表嵌套，只需在子列表中的选项前面添加四个空格：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">1.</span> 第一项：
-    <span class="k">-</span> 第一项嵌套的第一个元素
-    <span class="k">-</span> 第一项嵌套的第二个元素
-<span class="k">2.</span> 第二项：
-    <span class="k">-</span> 第二项嵌套的第一个元素
-    <span class="k">-</span> 第二项嵌套的第二个元素
-</code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
-<ol>
-<li>第一项：
-<ul>
-<li>第一项嵌套的第一个元素</li>
-<li>第一项嵌套的第二个元素</li>
-</ul>
-</li>
-<li>第二项：
-<ul>
-<li>第二项嵌套的第一个元素</li>
-<li>第二项嵌套的第二个元素</li>
-</ul>
-</li>
-</ol>
-<h2 id="七区块">七、区块</h2>
-<p>在行首添加右尖括号 <code>&gt;</code> 来生成区块</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">&gt; </span><span class="ge">区块引用
-</span><span class="ge"></span><span class="k">&gt; </span><span class="ge">菜鸟教程
-</span><span class="ge"></span><span class="k">&gt; </span><span class="ge">学的不仅是技术更是梦想
-</span></code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
+</div><p>控制台输出:</p>
 <blockquote>
-<p>区块引用
-菜鸟教程
-学的不仅是技术更是梦想</p>
+<p>New Instance of ClassA&hellip;&hellip;<br>
+New Instance of ClassB&hellip;&hellip;<br>
+New Instance of ClassC&hellip;&hellip;</p>
 </blockquote>
-<p>区块可以嵌套，一个 <code>&gt;</code> 号是最外层，两个 <code>&gt;</code> 号是第一层嵌套，以此类推：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">&gt; </span><span class="ge">最外层
-</span><span class="ge"></span><span class="k">&gt; </span><span class="ge">&gt; 第一层嵌套
-</span><span class="ge"></span><span class="k">&gt; </span><span class="ge">&gt; &gt; 第二层嵌套
-</span></code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
-<blockquote>
-<p>最外层</p>
-<blockquote>
-<p>第一层嵌套</p>
-<blockquote>
-<p>第二层嵌套</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>▼区块中可以使用列表</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">&gt; </span><span class="ge">区块中使用列表
-</span><span class="ge"></span><span class="k">&gt; </span><span class="ge">1. 第一项
-</span><span class="ge"></span><span class="k">&gt; </span><span class="ge">2. 第二项
-</span><span class="ge"></span><span class="k">&gt; </span><span class="ge">+ 第一项
-</span><span class="ge"></span><span class="k">&gt; </span><span class="ge">+ 第二项
-</span><span class="ge"></span><span class="k">&gt; </span><span class="ge">+ 第三项
-</span></code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
-<blockquote>
-<p>区块中使用列表</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-</ol>
+<h2 id="抽象类">抽象类</h2>
+<p>可以包含抽象方法的类，叫做抽象类<br>
+抽象方法规定子类必须做这件事，但是子类怎么做，抽象方法不限制。<br>
+子类继承抽象类之后，必须通过方法重写，对继承自父类的抽象方法给出实现方案。</p>
+<h2 id="接口">接口</h2>
+<p>接口的定义和类类似，可以已有接口定义新的接口</p>
 <ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
+<li>方法无实现，不需要指定访问限制符（public）</li>
+<li>属性是<code>public static final</code>类型
+在实现接口的类中要实现接口中定义的<strong>所有</strong>抽象方法</li>
 </ul>
-</blockquote>
-<p>▼列表中也可以使用区块，此时要在 <code>&gt;</code> 前添加四个空格（一个<code>tab</code>）的缩进</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">*</span> 第一项
-<span class="k">    &gt; </span><span class="ge">text  
-</span><span class="ge"></span><span class="k">    &gt; </span><span class="ge">example  
-</span><span class="ge"></span><span class="k">*</span> 第二项
-</code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
-<ul>
-<li>第一项
-<blockquote>
-<p>text<br>
-example</p>
-</blockquote>
-</li>
-<li>第二项</li>
-</ul>
-<h2 id="八表格">八、表格</h2>
-<p>markdown中使用 <code>|</code> 来分隔不同的单元格，用 <code>-</code> 来分隔表头和其他行
-语法格式如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">|  表头   | 表头  |  
-|  ----  | ----  |  
-| 单元格  | 单元格 |  
-| 单元格  | 单元格 |  
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="对齐">对齐</h3>
-<p>对第二行进行修改可以设置表格的对齐方式</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">-: 设置内容和标题栏居右对齐。  
-:- 设置内容和标题栏居左对齐。  
-:-: 设置内容和标题栏居中对齐。  
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">| 左对齐 | 右对齐 | 居中对齐 |  
-| :-----| ----: | :----: |  
-| 单元格 | 单元格 | 单元格 |  
-| 单元格 | 单元格 | 单元格 |  
-</code></pre></td></tr></table>
-</div>
-</div><p><!-- raw HTML omitted --><strong>效果：</strong><!-- raw HTML omitted --></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">左对齐</th>
-<th style="text-align:right">右对齐</th>
-<th style="text-align:center">居中对齐</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">单元格</td>
-<td style="text-align:right">单元格</td>
-<td style="text-align:center">单元格</td>
-</tr>
-<tr>
-<td style="text-align:left">单元格</td>
-<td style="text-align:right">单元格</td>
-<td style="text-align:center">单元格</td>
-</tr>
-</tbody>
-</table>
+<p>多个无关的类可以实现同一个接口；一个类可以实现多个接口（多继承）<br>
+接口无构造方法，不能直接实例化；允许有接口变量，可以指向实现了接口的类的对象，与实现类之间存在多态性。<br>
+接口中的所有方法均采用默认访问权限。当子类实现接口以后，通过重写化抽象为具体，将该方法给出实现方法的时候，会将该方法的访问权限自动升级为<code>public</code>。所有接口方法无需编写访问权限修饰符。</p>
+
 </section>
 
 
@@ -517,7 +367,7 @@ example</p>
     
     <section class="article-tags">
         
-            <a href="/tags/markdown/">markdown</a>
+            <a href="/tags/java/">Java</a>
         
     </section>
 
@@ -545,30 +395,6 @@ example</p>
         <h2 class="section-title">相关文章</h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
-                
-                    
-<article class="">
-    <a href="/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%B8%80/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Markdown笔记(一)</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/2021/05/java%E7%AC%94%E8%AE%B0/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Java笔记</h2>
-        </div>
-    </a>
-</article>
                 
                     
 <article class="">
@@ -602,6 +428,30 @@ example</p>
 
         <div class="article-details">
             <h2 class="article-title">Java面向对象笔记</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%BA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown笔记(二)</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%B8%80/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown笔记(一)</h2>
         </div>
     </a>
 </article>

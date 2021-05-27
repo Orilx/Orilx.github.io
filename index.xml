@@ -6,7 +6,134 @@
         <description>Recent content on Dr.Ink的小站</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 26 May 2021 00:51:18 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 27 May 2021 18:07:37 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Java笔记</title>
+        <link>https://orilx.gitee.io/p/2021/05/java%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Thu, 27 May 2021 18:07:37 +0800</pubDate>
+        
+        <guid>https://orilx.gitee.io/p/2021/05/java%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;h2 id=&#34;继承&#34;&gt;继承&lt;/h2&gt;
+&lt;p&gt;子类不能直接访问继承自父类发私有成员，但是可以通过继承自父类的有访问权限的方法或通过调用父类的构造子，间接访问这些私有成员。&lt;/p&gt;
+&lt;h3 id=&#34;super&#34;&gt;super&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;第一种用法：在子类中调用父类的构造子&lt;br&gt;
+此时super必须是子类构造体中第一行可执行代码&lt;/li&gt;
+&lt;li&gt;第二种用法：在子类中调用，实现被子类重写的父类方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;final&#34;&gt;final&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;作用于类，禁止类被继承&lt;/li&gt;
+&lt;li&gt;作用于方法，禁止被子类重写&lt;/li&gt;
+&lt;li&gt;作用于属性，禁止属性被修改，相当于定义常量
+*&lt;em&gt;&lt;code&gt;final&lt;/code&gt;修饰的属性如果没有进行初始化，那么必须在构造子中对该属性进行一次初始化&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;作用于参数，可以有效防止方法内部对参数的二次赋值，保证数值的纯净度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;类的实例化过程&#34;&gt;类的实例化过程&lt;/h2&gt;
+&lt;p&gt;向上查找、向下创建&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;向上查找：从当前类开始逐级向上，直到找到最终父类为止。&lt;br&gt;
+*&lt;em&gt;通过构造子内部&lt;code&gt;super&lt;/code&gt;调用，完成逐级向上的查找过程（直到&lt;code&gt;Object&lt;/code&gt;类）&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;向下创建：从&lt;code&gt;Object&lt;/code&gt;类开始逐级实例化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ClassA&lt;/span&gt; 
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ClassA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; 
+	&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//		super();
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;New Instance of ClassA......&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+	&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ClassB&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ClassA&lt;/span&gt; 
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ClassB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; 
+	&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//		super();
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;New Instance of ClassB......&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+	&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/*final*/&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ClassC&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ClassB&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ClassC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; 
+	&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//		super();        //调用父类的无参构造子
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;New Instance of ClassC......&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+	&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Test&lt;/span&gt; 
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; 
+	&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;c1&#34;&gt;//实例化ClassC
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;n&#34;&gt;ClassD&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ClassC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+	&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;控制台输出:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;New Instance of ClassA&amp;hellip;&amp;hellip;&lt;br&gt;
+New Instance of ClassB&amp;hellip;&amp;hellip;&lt;br&gt;
+New Instance of ClassC&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;抽象类&#34;&gt;抽象类&lt;/h2&gt;
+&lt;p&gt;可以包含抽象方法的类，叫做抽象类&lt;br&gt;
+抽象方法规定子类必须做这件事，但是子类怎么做，抽象方法不限制。&lt;br&gt;
+子类继承抽象类之后，必须通过方法重写，对继承自父类的抽象方法给出实现方案。&lt;/p&gt;
+&lt;h2 id=&#34;接口&#34;&gt;接口&lt;/h2&gt;
+&lt;p&gt;接口的定义和类类似，可以已有接口定义新的接口&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法无实现，不需要指定访问限制符（public）&lt;/li&gt;
+&lt;li&gt;属性是&lt;code&gt;public static final&lt;/code&gt;类型
+在实现接口的类中要实现接口中定义的&lt;strong&gt;所有&lt;/strong&gt;抽象方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;多个无关的类可以实现同一个接口；一个类可以实现多个接口（多继承）&lt;br&gt;
+接口无构造方法，不能直接实例化；允许有接口变量，可以指向实现了接口的类的对象，与实现类之间存在多态性。&lt;br&gt;
+接口中的所有方法均采用默认访问权限。当子类实现接口以后，通过重写化抽象为具体，将该方法给出实现方法的时候，会将该方法的访问权限自动升级为&lt;code&gt;public&lt;/code&gt;。所有接口方法无需编写访问权限修饰符。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>git的配置</title>
         <link>https://orilx.gitee.io/p/2021/05/git%E7%9A%84%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Wed, 26 May 2021 00:51:18 +0000</pubDate>
@@ -1349,17 +1476,6 @@ hexo博客又崩了&lt;br&gt;
 &lt;p&gt;折腾了一整天，终于把这个博客配置的差不多了&lt;br&gt;
 剩下的细节以后再搞吧 (._. )&amp;gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;del&gt;得找个时间把markdown学会了(￣﹃￣)&lt;/del&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title></title>
-        <link>https://orilx.gitee.io/p/1/01/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://orilx.gitee.io/p/1/01/</guid>
-        <description>&lt;p&gt;静态页面生成器&lt;/p&gt;
-&lt;h2 id=&#34;docsifygitbook&#34;&gt;docsify/gitbook&lt;/h2&gt;
-&lt;p&gt;文档适用&lt;/p&gt;
 </description>
         </item>
         
