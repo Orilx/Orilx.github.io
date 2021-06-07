@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Java笔记'><title>Java笔记</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='String  常量字符串不放在堆中，放在数据区中 频繁改变字符串的内容会引起很大的内存开销 当需要改变字符串的内容时，String类的方法会返回一个新的String对象。
+如果String内容没有发生改变，String的相关方法只返回指向原有对象的引用。     方法 作用     S.charAt(num) 返回字符串中脚标为num的字符   S1.indexOf(S2) 返回字符串中关键字首字母的位置，如果没有则返回-1   S1.equalsIgnoreCase(S2) 忽略大小写比较两字符串   S.replace(&#39;c1&#39;,&#39;c2&#39;) 将字符串中所有字符c1换成c2   S.trim() 删掉字符串前后所有的空格   S1.startsWith(S2) 测试此字符串是否以指定的前缀开始   S1.endsWith(S2) 测试此字符串是否以指定的后缀结束   静态方法：String.valueOf(i) 将形参对应的值返回成String类型    Wrapper&amp;ndash;包装器类 Wrapper类对象的值初始化后不能改变
+实例1
+1 2 3 4 5  int x=1; String y = &amp;#34;2&amp;#34;; System.out.println(x&#43;y); System.out.println(x&#43;Integer.parseInt(y)); System.out.println(x&#43;Integer.valueOf(y).intValue());   输出:'><title>常用类</title>
 
-<link rel='canonical' href='https://orilx.gitee.io/p/2021/05/java%E7%AC%94%E8%AE%B0/'>
+<link rel='canonical' href='https://orilx.gitee.io/p/2021/06/%E5%B8%B8%E7%94%A8%E7%B1%BB/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Java笔记'>
-<meta property='og:description' content='Java笔记'>
-<meta property='og:url' content='https://orilx.gitee.io/p/2021/05/java%E7%AC%94%E8%AE%B0/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='常用类'>
+<meta property='og:description' content='String  常量字符串不放在堆中，放在数据区中 频繁改变字符串的内容会引起很大的内存开销 当需要改变字符串的内容时，String类的方法会返回一个新的String对象。
+如果String内容没有发生改变，String的相关方法只返回指向原有对象的引用。     方法 作用     S.charAt(num) 返回字符串中脚标为num的字符   S1.indexOf(S2) 返回字符串中关键字首字母的位置，如果没有则返回-1   S1.equalsIgnoreCase(S2) 忽略大小写比较两字符串   S.replace(&#39;c1&#39;,&#39;c2&#39;) 将字符串中所有字符c1换成c2   S.trim() 删掉字符串前后所有的空格   S1.startsWith(S2) 测试此字符串是否以指定的前缀开始   S1.endsWith(S2) 测试此字符串是否以指定的后缀结束   静态方法：String.valueOf(i) 将形参对应的值返回成String类型    Wrapper&amp;ndash;包装器类 Wrapper类对象的值初始化后不能改变
+实例1
+1 2 3 4 5  int x=1; String y = &amp;#34;2&amp;#34;; System.out.println(x&#43;y); System.out.println(x&#43;Integer.parseInt(y)); System.out.println(x&#43;Integer.valueOf(y).intValue());   输出:'>
+<meta property='og:url' content='https://orilx.gitee.io/p/2021/06/%E5%B8%B8%E7%94%A8%E7%B1%BB/'>
 <meta property='og:site_name' content='Dr.Ink的小站'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:published_time' content='2021-05-27T18:07:37&#43;08:00'/><meta property='article:modified_time' content='2021-05-27T18:07:37&#43;08:00'/><meta property='og:image' content='https://orilx.gitee.io/img/0.0.jpg' />
-<meta name="twitter:title" content="Java笔记">
-<meta name="twitter:description" content="Java笔记"><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2021-06-07T23:25:38&#43;08:00'/><meta property='article:modified_time' content='2021-06-07T23:25:38&#43;08:00'/><meta property='og:image' content='https://orilx.gitee.io/img/0.0.jpg' />
+<meta name="twitter:title" content="常用类">
+<meta name="twitter:description" content="String  常量字符串不放在堆中，放在数据区中 频繁改变字符串的内容会引起很大的内存开销 当需要改变字符串的内容时，String类的方法会返回一个新的String对象。
+如果String内容没有发生改变，String的相关方法只返回指向原有对象的引用。     方法 作用     S.charAt(num) 返回字符串中脚标为num的字符   S1.indexOf(S2) 返回字符串中关键字首字母的位置，如果没有则返回-1   S1.equalsIgnoreCase(S2) 忽略大小写比较两字符串   S.replace(&#39;c1&#39;,&#39;c2&#39;) 将字符串中所有字符c1换成c2   S.trim() 删掉字符串前后所有的空格   S1.startsWith(S2) 测试此字符串是否以指定的前缀开始   S1.endsWith(S2) 测试此字符串是否以指定的后缀结束   静态方法：String.valueOf(i) 将形参对应的值返回成String类型    Wrapper&amp;ndash;包装器类 Wrapper类对象的值初始化后不能改变
+实例1
+1 2 3 4 5  int x=1; String y = &amp;#34;2&amp;#34;; System.out.println(x&#43;y); System.out.println(x&#43;Integer.parseInt(y)); System.out.println(x&#43;Integer.valueOf(y).intValue());   输出:"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://orilx.gitee.io/img/0.0.jpg' />
     <link rel="shortcut icon" href="img/favicon_1.svg" />
 
@@ -211,21 +220,13 @@
                 笔记
             </a>
         
-            <a href="/categories/java/" style="background-color: #D59313; color: #fff;">
-                Java
-            </a>
-        
     </header>
     
 
     <h2 class="article-title">
-        <a href="/p/2021/05/java%E7%AC%94%E8%AE%B0/">Java笔记</a>
+        <a href="/p/2021/06/%E5%B8%B8%E7%94%A8%E7%B1%BB/">常用类</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        Java笔记
-    </h3>
     <footer class="article-time">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -235,19 +236,139 @@
 
 
 
-        <time class="article-time--published">May 27, 2021</time>
+        <time class="article-time--published">Jun 07, 2021</time>
     </footer></div>
 </header>
 
     <section class="article-content">
-    <h2 id="继承">继承</h2>
-<p>父类构造方法不能被子类继承<br>
-子类的构造方法中必须要调用父类的构造方法</p>
+    <h2 id="string">String</h2>
 <ul>
-<li>子类通过super调用父类构造方法，调用<code>super</code>的语句必须放在子类构造方法的第一行</li>
-<li>若子类构造方法中没有显式调用父类构造方法，则系统默认调用父类无参数构造方法；若父类中没有定义无参数的构造方法，编译出错</li>
+<li>常量字符串不放在堆中，放在数据区中</li>
+<li>频繁改变字符串的内容会引起很大的内存开销</li>
+<li>当需要改变字符串的内容时，String类的方法会返回一个新的String对象。<br>
+如果String内容没有发生改变，String的相关方法只返回指向原有对象的引用。</li>
 </ul>
-<h3 id="实例">实例：</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>S.charAt(num)</code></td>
+<td style="text-align:center">返回字符串中脚标为<code>num</code>的字符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>S1.indexOf(S2)</code></td>
+<td style="text-align:center">返回字符串中关键字首字母的位置，如果没有则返回<code>-1</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>S1.equalsIgnoreCase(S2)</code></td>
+<td style="text-align:center">忽略大小写比较两字符串</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>S.replace('c1','c2')</code></td>
+<td style="text-align:center">将字符串中所有字符<code>c1</code>换成<code>c2</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>S.trim()</code></td>
+<td style="text-align:center">删掉字符串前后所有的空格</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>S1.startsWith(S2)</code></td>
+<td style="text-align:center">测试此字符串是否以指定的前缀开始</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>S1.endsWith(S2)</code></td>
+<td style="text-align:center">测试此字符串是否以指定的后缀结束</td>
+</tr>
+<tr>
+<td style="text-align:center">静态方法：<code>String.valueOf(i)</code></td>
+<td style="text-align:center">将形参对应的值返回成String类型</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wrapper--包装器类">Wrapper&ndash;包装器类</h2>
+<p>Wrapper类对象的值初始化后<strong>不能改变</strong></p>
+<p>实例1</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="n">1</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&#34;2&#34;</span><span class="o">;</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">+</span><span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">y</span><span class="o">));</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">+</span><span class="n">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">y</span><span class="o">).</span><span class="na">intValue</span><span class="o">());</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>输出:</p>
+<blockquote>
+<p>12<br>
+3<br>
+3</p>
+</blockquote>
+<p>实例2</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">1</span><span class="o">;</span>
+<span class="n">Integer</span> <span class="n">integer</span> <span class="o">=</span> <span class="n">1</span><span class="o">;</span>       <span class="c1">//自动封装（打包）
+</span><span class="c1"></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">integer</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">integer</span><span class="o">;</span>           <span class="c1">//自动解封（解包）
+</span><span class="c1"></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">j</span><span class="o">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>输出：</p>
+<blockquote>
+<p>1</p>
+</blockquote>
+<h2 id="enum--枚举类">enum&ndash;枚举类</h2>
+<p><a class="link" href="https://www.runoob.com/java/java-enum.html"  target="_blank" rel="noopener"
+    >菜鸟教程-Java 枚举(enum)</a></p>
+<p>枚举是一个特殊的类，一般表示一组常量<br>
+使用 enum 关键字来定义，各个常量使用逗号<code>,</code> 来分割</p>
+<h3 id="枚举类型的主要方法">枚举类型的主要方法：</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">name()</td>
+<td style="text-align:center">返回此枚举常量的名称</td>
+</tr>
+<tr>
+<td style="text-align:center">toString()</td>
+<td style="text-align:center">返回此枚举常量的名称</td>
+</tr>
+<tr>
+<td style="text-align:center">values()</td>
+<td style="text-align:center">获得该枚举类型的所有枚举变量</td>
+</tr>
+<tr>
+<td style="text-align:center">ordinal()</td>
+<td style="text-align:center">获取该枚举变量的编号</td>
+</tr>
+</tbody>
+</table>
+<p>实例</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -261,175 +382,34 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">A</span> <span class="o">{</span>
-	<span class="n">A</span><span class="o">()</span> <span class="o">{</span>
-	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;A()&#34;</span><span class="o">);</span>
-	<span class="o">}</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">f</span><span class="o">()</span> <span class="o">{</span>
-	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;A:f()&#34;</span><span class="o">);</span>
-	<span class="o">}</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">enum</span> <span class="n">SEASON</span><span class="o">{</span>
+	<span class="n">春季</span><span class="o">,</span><span class="n">夏季</span><span class="o">,</span><span class="n">秋季</span><span class="o">,</span><span class="n">冬季</span>
 <span class="o">}</span>
-
-<span class="kd">class</span> <span class="nc">B</span> <span class="kd">extends</span> <span class="n">A</span><span class="o">{</span>
-	<span class="n">B</span><span class="o">(){</span>
-	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;B()&#34;</span><span class="o">);</span>
-	<span class="o">}</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">f</span><span class="o">(){</span>
-	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;B:f()&#34;</span><span class="o">);</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[</span> <span class="o">]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-	<span class="n">B</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">B</span><span class="o">();</span>
-	<span class="n">b</span><span class="o">.</span><span class="na">f</span><span class="o">();</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>输出结果为</p>
-<blockquote>
-<p>A()<br>
-B()<br>
-B:f()</p>
-</blockquote>
-<p>子类不能直接访问父类的私有成员，但是可以通过继承自父类的有访问权限的方法或通过调用父类的构造子，间接访问这些私有成员。</p>
-<h3 id="super">super</h3>
-<p>指向自己离自己最近的父类对象的一个引用<br>
-<strong>作用：</strong></p>
-<ul>
-<li>第一种用法：在子类中调用父类的构造子<br>
-*<em>此时super必须是子类构造体中第一行可执行代码</em></li>
-<li>第二种用法：引用父类中的成员和方法</li>
-</ul>
-<h2 id="对象转型">对象转型</h2>
-<p>子类类型和父类类型之间的转换关系<br>
-两种转换方式：</p>
-<ul>
-<li>向上转型(upcasting)</li>
-<li>向下转型(downcasting)</li>
-</ul>
-<p><strong>instanceof</strong><br>
-判断该引用所指对象是否属于该类或该类子类的对象</p>
-<h3 id="实例-1">实例</h3>
-<h2 id="final">final</h2>
-<ul>
-<li>作用于类，禁止类被继承</li>
-<li>作用于方法，禁止被子类重写</li>
-<li>作用于属性，禁止属性被修改，相当于定义常量<br>
-*<em><code>final</code>修饰的属性如果没有进行初始化，那么必须在构造子中对该属性进行一次初始化</em></li>
-<li>作用于参数，可以有效防止方法内部对参数的二次赋值，保证数值的纯净度。</li>
-</ul>
-<h2 id="类的实例化过程">类的实例化过程</h2>
-<p><strong>向上查找、向下创建</strong></p>
-<ul>
-<li>向上查找：从当前类开始逐级向上，直到找到最终父类为止。<br>
-*<em>通过构造子内部<code>super</code>调用，完成逐级向上的查找过程（直到<code>Object</code>类）</em></li>
-<li>向下创建：从<code>Object</code>类开始逐级实例化</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassA</span> 
-<span class="o">{</span>
-	<span class="kd">public</span> <span class="nf">ClassA</span><span class="o">()</span> 
-	<span class="o">{</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;New Instance of ClassA......&#34;</span><span class="o">);</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassB</span> <span class="kd">extends</span> <span class="n">ClassA</span> 
-<span class="o">{</span>
-	<span class="kd">public</span> <span class="nf">ClassB</span><span class="o">()</span> 
-	<span class="o">{</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;New Instance of ClassB......&#34;</span><span class="o">);</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassC</span> <span class="kd">extends</span> <span class="n">ClassB</span>
-<span class="o">{</span>
-	<span class="kd">public</span> <span class="nf">ClassC</span><span class="o">()</span> 
-	<span class="o">{</span>
-<span class="c1">//		super();        //调用父类的无参构造子
-</span><span class="c1"></span>		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;New Instance of ClassC......&#34;</span><span class="o">);</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> 
-<span class="o">{</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> 
-	<span class="o">{</span>
-		<span class="c1">//实例化ClassC
-</span><span class="c1"></span>		<span class="n">ClassC</span> <span class="n">c</span><span class="o">=</span><span class="k">new</span> <span class="n">ClassC</span><span class="o">();</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">SEASON</span><span class="o">[]</span> <span class="n">t</span> <span class="o">=</span> <span class="n">SEASON</span><span class="o">.</span><span class="na">values</span><span class="o">();</span>
+		<span class="k">for</span><span class="o">(</span><span class="n">SEASON</span> <span class="n">s</span> <span class="o">:</span> <span class="n">t</span><span class="o">){</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+		<span class="o">}</span>
 	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>控制台输出:</p>
+</div><p>输出：</p>
 <blockquote>
-<p>New Instance of ClassA&hellip;&hellip;<br>
-New Instance of ClassB&hellip;&hellip;<br>
-New Instance of ClassC&hellip;&hellip;</p>
+<p>春季<br>
+夏季<br>
+秋季<br>
+冬季</p>
 </blockquote>
-<h2 id="抽象类">抽象类</h2>
-<p>可以包含抽象方法的类，叫做抽象类<br>
-抽象方法规定子类必须做这件事，但是子类怎么做，抽象方法不限制。<br>
-子类继承抽象类之后，必须通过方法重写，对继承自父类的抽象方法给出实现方案。</p>
-<h2 id="接口">接口</h2>
-<p>接口的定义和类类似，可以已有接口定义新的接口</p>
+<p>特点：</p>
 <ul>
-<li>方法无实现，不需要指定访问限制符（public）</li>
-<li>属性是<code>public static final</code>类型
-在实现接口的类中要实现接口中定义的<strong>所有</strong>抽象方法</li>
+<li>可以添加属性、方法</li>
+<li>enum不能继承类（包括继承enum），只能实现接口；类无此限制，enum更像interface</li>
+<li>enum只支持public和[default] 访问修饰</li>
 </ul>
-<p>多个无关的类可以实现同一个接口；一个类可以实现多个接口（多继承）<br>
-接口无构造方法，不能直接实例化；允许有接口变量，可以指向实现了接口的类的对象，与实现类之间存在多态性。<br>
-接口中的所有方法均采用默认访问权限。当子类实现接口以后，通过重写化抽象为具体，将该方法给出实现方法的时候，会将该方法的访问权限自动升级为<code>public</code>。所有接口方法无需编写访问权限修饰符。</p>
 
 </section>
 
@@ -439,6 +419,8 @@ New Instance of ClassC&hellip;&hellip;</p>
     <section class="article-tags">
         
             <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
         
     </section>
 
@@ -466,6 +448,18 @@ New Instance of ClassC&hellip;&hellip;</p>
         <h2 class="section-title">相关文章</h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/2021/05/java%E7%AC%94%E8%AE%B0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java笔记</h2>
+        </div>
+    </a>
+</article>
                 
                     
 <article class="">
@@ -505,18 +499,6 @@ New Instance of ClassC&hellip;&hellip;</p>
                 
                     
 <article class="">
-    <a href="/p/2021/06/%E5%B8%B8%E7%94%A8%E7%B1%BB/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">常用类</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
     <a href="/p/2021/02/markdown%E7%AC%94%E8%AE%B0%E4%BA%8C/">
         
         
@@ -533,8 +515,6 @@ New Instance of ClassC&hellip;&hellip;</p>
 </aside>
 
 
-    
-        
     
 
     <footer class="site-footer">

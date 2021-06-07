@@ -6,7 +6,19 @@
     <description>Recent content in 笔记 on Dr.Ink的小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 26 May 2021 00:51:18 +0000</lastBuildDate><atom:link href="https://orilx.gitee.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Jun 2021 23:25:38 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常用类</title>
+      <link>https://orilx.gitee.io/p/2021/06/%E5%B8%B8%E7%94%A8%E7%B1%BB/</link>
+      <pubDate>Mon, 07 Jun 2021 23:25:38 +0800</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/06/%E5%B8%B8%E7%94%A8%E7%B1%BB/</guid>
+      <description>String  常量字符串不放在堆中，放在数据区中 频繁改变字符串的内容会引起很大的内存开销 当需要改变字符串的内容时，String类的方法会返回一个新的String对象。
+如果String内容没有发生改变，String的相关方法只返回指向原有对象的引用。     方法 作用     S.charAt(num) 返回字符串中脚标为num的字符   S1.indexOf(S2) 返回字符串中关键字首字母的位置，如果没有则返回-1   S1.equalsIgnoreCase(S2) 忽略大小写比较两字符串   S.replace(&#39;c1&#39;,&#39;c2&#39;) 将字符串中所有字符c1换成c2   S.trim() 删掉字符串前后所有的空格   S1.startsWith(S2) 测试此字符串是否以指定的前缀开始   S1.endsWith(S2) 测试此字符串是否以指定的后缀结束   静态方法：String.valueOf(i) 将形参对应的值返回成String类型    Wrapper&amp;ndash;包装器类 Wrapper类对象的值初始化后不能改变
+实例1
+1 2 3 4 5  int x=1; String y = &amp;#34;2&amp;#34;; System.out.println(x+y); System.out.println(x+Integer.parseInt(y)); System.out.println(x+Integer.valueOf(y).intValue());   输出:</description>
+    </item>
+    
     <item>
       <title>git的配置</title>
       <link>https://orilx.gitee.io/p/2021/05/git%E7%9A%84%E9%85%8D%E7%BD%AE/</link>
