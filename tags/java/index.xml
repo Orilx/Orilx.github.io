@@ -6,7 +6,23 @@
     <description>Recent content in Java on Dr.Ink的小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 07 Jun 2021 23:25:38 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Jun 2021 13:09:38 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>容器</title>
+      <link>https://orilx.gitee.io/p/2021/06/%E5%AE%B9%E5%99%A8/</link>
+      <pubDate>Fri, 11 Jun 2021 13:09:38 +0800</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/06/%E5%AE%B9%E5%99%A8/</guid>
+      <description>容器类 Java里提供好的可用的数据结构
+一系列不同功能的 由Java类库提供的用于管理对象的类
+都放在Java.util包里
+功能：
+ 持有操作对象 自动完成容量的变化  容器类框架  
+ Collection  列表（List）：按照一定次序（对象进入顺序） 排列的对象集，对象之间有次序关系，对象可以重复 集合（Set）：对象唯一，不会重复；元素没有顺序 队列（Queue）：根据排队规则确定对象的顺序   Map（映射表）：一群成对的对象集，这些对象各自保持着“键-值”（key-value）对应关系  Collection接口    方法 功能     add() 添加   remove() 移除   contains() 查看是否包含   addAll()    removeAll()    containAll()    retainAll() 取交集    ———————————
+Queue（队列） 一种先进先出（FIFO）的容器，从容器的一段放入对象，从另一端取出对象，并且放入和取出的顺序相同
+主要方法  offer()：（入队）如果可能，将指定的元素插入此队列 peek(),element()：在不移除的情况下返回队头。peek方法在队列为空的时候返回null,element方法在队列为空的时候抛出异常 poll(),remove()：（出队）移除并返回队头。pull方法在队列为空时返回null，remove方法在队头的时候抛出异常  主要实现类 LinkedList</description>
+    </item>
+    
     <item>
       <title>常用类</title>
       <link>https://orilx.gitee.io/p/2021/06/%E5%B8%B8%E7%94%A8%E7%B1%BB/</link>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='容器类 Java里提供好的可用的数据结构
+一系列不同功能的 由Java类库提供的用于管理对象的类
+都放在Java.util包里
+功能：
+ 持有操作对象 自动完成容量的变化  容器类框架  
+ Collection  列表（List）：按照一定次序（对象进入顺序） 排列的对象集，对象之间有次序关系，对象可以重复 集合（Set）：对象唯一，不会重复；元素没有顺序 队列（Queue）：根据排队规则确定对象的顺序   Map（映射表）：一群成对的对象集，这些对象各自保持着“键-值”（key-value）对应关系  Collection接口    方法 功能     add() 添加   remove() 移除   contains() 查看是否包含   addAll()    removeAll()    containAll()    retainAll() 取交集    ———————————
+Queue（队列） 一种先进先出（FIFO）的容器，从容器的一段放入对象，从另一端取出对象，并且放入和取出的顺序相同
+主要方法  offer()：（入队）如果可能，将指定的元素插入此队列 peek(),element()：在不移除的情况下返回队头。peek方法在队列为空的时候返回null,element方法在队列为空的时候抛出异常 poll(),remove()：（出队）移除并返回队头。pull方法在队列为空时返回null，remove方法在队头的时候抛出异常  主要实现类 LinkedList'><title>容器</title>
+
+<link rel='canonical' href='https://orilx.gitee.io/p/2021/06/%E5%AE%B9%E5%99%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='容器'>
+<meta property='og:description' content='容器类 Java里提供好的可用的数据结构
+一系列不同功能的 由Java类库提供的用于管理对象的类
+都放在Java.util包里
+功能：
+ 持有操作对象 自动完成容量的变化  容器类框架  
+ Collection  列表（List）：按照一定次序（对象进入顺序） 排列的对象集，对象之间有次序关系，对象可以重复 集合（Set）：对象唯一，不会重复；元素没有顺序 队列（Queue）：根据排队规则确定对象的顺序   Map（映射表）：一群成对的对象集，这些对象各自保持着“键-值”（key-value）对应关系  Collection接口    方法 功能     add() 添加   remove() 移除   contains() 查看是否包含   addAll()    removeAll()    containAll()    retainAll() 取交集    ———————————
+Queue（队列） 一种先进先出（FIFO）的容器，从容器的一段放入对象，从另一端取出对象，并且放入和取出的顺序相同
+主要方法  offer()：（入队）如果可能，将指定的元素插入此队列 peek(),element()：在不移除的情况下返回队头。peek方法在队列为空的时候返回null,element方法在队列为空的时候抛出异常 poll(),remove()：（出队）移除并返回队头。pull方法在队列为空时返回null，remove方法在队头的时候抛出异常  主要实现类 LinkedList'>
+<meta property='og:url' content='https://orilx.gitee.io/p/2021/06/%E5%AE%B9%E5%99%A8/'>
+<meta property='og:site_name' content='Dr.Ink的小站'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:published_time' content='2021-06-11T13:09:38&#43;08:00'/><meta property='article:modified_time' content='2021-06-11T13:09:38&#43;08:00'/><meta property='og:image' content='https://orilx.gitee.io/img/0.0.jpg' />
+<meta name="twitter:title" content="容器">
+<meta name="twitter:description" content="容器类 Java里提供好的可用的数据结构
+一系列不同功能的 由Java类库提供的用于管理对象的类
+都放在Java.util包里
+功能：
+ 持有操作对象 自动完成容量的变化  容器类框架  
+ Collection  列表（List）：按照一定次序（对象进入顺序） 排列的对象集，对象之间有次序关系，对象可以重复 集合（Set）：对象唯一，不会重复；元素没有顺序 队列（Queue）：根据排队规则确定对象的顺序   Map（映射表）：一群成对的对象集，这些对象各自保持着“键-值”（key-value）对应关系  Collection接口    方法 功能     add() 添加   remove() 移除   contains() 查看是否包含   addAll()    removeAll()    containAll()    retainAll() 取交集    ———————————
+Queue（队列） 一种先进先出（FIFO）的容器，从容器的一段放入对象，从另一端取出对象，并且放入和取出的顺序相同
+主要方法  offer()：（入队）如果可能，将指定的元素插入此队列 peek(),element()：在不移除的情况下返回队头。peek方法在队列为空的时候返回null,element方法在队列为空的时候抛出异常 poll(),remove()：（出队）移除并返回队头。pull方法在队列为空时返回null，remove方法在队头的时候抛出异常  主要实现类 LinkedList"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://orilx.gitee.io/img/0.0.jpg' />
+    <link rel="shortcut icon" href="img/favicon_1.svg" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column compact article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_s_hud312cf2fac231e4fa1e424beef7357f1_131642_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🤖</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://orilx.gitee.io/">Dr.Ink的小站</a></h1>
+        <h2 class="site-description">菜鸡</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>暗色模式</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://orilx.gitee.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" style="background-color: #576DAD; color: #fff;">
+                笔记
+            </a>
+        
+            <a href="/categories/java/" style="background-color: #D59313; color: #fff;">
+                Java
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/2021/06/%E5%AE%B9%E5%99%A8/">容器</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jun 11, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h2 id="容器类">容器类</h2>
+<p>Java里提供好的可用的数据结构</p>
+<p>一系列不同功能的
+由Java类库提供的用于管理对象的类<br>
+都放在Java.util包里<br>
+功能：</p>
+<ul>
+<li>持有操作对象</li>
+<li>自动完成容量的变化</li>
+</ul>
+<h2 id="容器类框架">容器类框架</h2>
+<p><figure style="flex-grow: 146; flex-basis: 351px">
+		<a href="/p/2021/06/%E5%AE%B9%E5%99%A8/2021-06-11-12-06-15.png" data-size="563x384"><img src="/p/2021/06/%E5%AE%B9%E5%99%A8/2021-06-11-12-06-15.png"
+				srcset="/p/2021/06/%E5%AE%B9%E5%99%A8/2021-06-11-12-06-15_hue6eb9cb5396a06927157cf63d27dabc2_33648_480x0_resize_box_2.png 480w, /p/2021/06/%E5%AE%B9%E5%99%A8/2021-06-11-12-06-15_hue6eb9cb5396a06927157cf63d27dabc2_33648_1024x0_resize_box_2.png 1024w"
+				width="563"
+				height="384"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<ol>
+<li><strong>Collection</strong>
+<ul>
+<li>列表（List）：按照<strong>一定次序（对象进入顺序）</strong> 排列的对象集，对象之间有次序关系，对象<strong>可以重复</strong></li>
+<li>集合（Set）：对象唯一，<strong>不会重复</strong>；元素没有顺序</li>
+<li>队列（Queue）：根据排队规则确定对象的顺序</li>
+</ul>
+</li>
+<li><strong>Map（映射表）</strong>：一群成对的对象集，这些对象各自保持着“键-值”（key-value）对应关系</li>
+</ol>
+<h2 id="collection接口">Collection接口</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">add()</td>
+<td style="text-align:center">添加</td>
+</tr>
+<tr>
+<td style="text-align:center">remove()</td>
+<td style="text-align:center">移除</td>
+</tr>
+<tr>
+<td style="text-align:center">contains()</td>
+<td style="text-align:center">查看是否包含</td>
+</tr>
+<tr>
+<td style="text-align:center">addAll()</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">removeAll()</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">containAll()</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">retainAll()</td>
+<td style="text-align:center">取交集</td>
+</tr>
+</tbody>
+</table>
+<p>———————————</p>
+<h2 id="queue队列">Queue（队列）</h2>
+<p>一种先进先出（FIFO）的容器，从容器的一段放入对象，从另一端取出对象，并且放入和取出的顺序相同</p>
+<h3 id="主要方法">主要方法</h3>
+<ul>
+<li>offer()：（入队）如果可能，将指定的元素插入此队列</li>
+<li>peek(),element()：在不移除的情况下返回队头。peek方法在队列为空的时候返回<code>null</code>,element方法在队列为空的时候抛出异常</li>
+<li>poll(),remove()：（出队）移除并返回队头。pull方法在队列为空时返回<code>null</code>，remove方法在队头的时候抛出异常</li>
+</ul>
+<h3 id="主要实现类">主要实现类</h3>
+<p><strong>LinkedList</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span>
+   <span class="kd">implements</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;,</span><span class="n">Deque</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Deque接口（JDK6引入）：双端队列，是Queue的子接口</p>
+<p><strong>实例</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Queue</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">();</span>
+<span class="n">queue</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="s">&#34;Hello&#34;</span><span class="o">);</span>
+<span class="n">queue</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="s">&#34;World!&#34;</span><span class="o">);</span>
+<span class="n">queue</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="s">&#34;你好！&#34;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">queue</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+<span class="n">String</span> <span class="n">str</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">((</span><span class="n">str</span> <span class="o">=</span> <span class="o">(</span><span class="n">String</span><span class="o">)</span><span class="n">queue</span><span class="o">.</span><span class="na">poll</span><span class="o">())</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">queue</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>输出：</p>
+<blockquote>
+<p>3<br>
+Hello<br>
+World!<br>
+你好！<br>
+0</p>
+</blockquote>
+<h2 id="set接口">Set接口</h2>
+<p>Collection接口的子接口，未提供额外的方法<br>
+理解：实际上Set就是Collection，只是行为不同（继承与多态思想的典型应用：表现不同的行为）<br>
+实现Set接口类的特点：元素无顺序，不重复</p>
+<h3 id="主要实现类-1">主要实现类</h3>
+<p><strong>HashSet、TreeSet、LinkedHashSet</strong></p>
+<h4 id="hashset">HashSet</h4>
+<p><strong>实例</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Set</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">();</span>
+<span class="n">s</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Student</span><span class="o">(</span><span class="n">1</span><span class="o">,</span><span class="s">&#34;Tom&#34;</span><span class="o">,</span><span class="n">70</span><span class="o">));</span>
+<span class="n">s</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Student</span><span class="o">(</span><span class="n">2</span><span class="o">,</span><span class="s">&#34;Peter&#34;</span><span class="o">,</span><span class="n">80</span><span class="o">));</span>
+<span class="n">s</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Student</span><span class="o">(</span><span class="n">3</span><span class="o">,</span><span class="s">&#34;Bob&#34;</span><span class="o">,</span><span class="n">90</span><span class="o">));</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="k">new</span> <span class="n">Student</span><span class="o">(</span><span class="n">1</span><span class="o">,</span><span class="s">&#34;Tom&#34;</span><span class="o">,</span><span class="n">70</span><span class="o">)));</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>输出：</p>
+<blockquote>
+<p>false<br>
+[no is : 2, no is : 1, no is : 3]</p>
+</blockquote>
+<p><strong>原因：HashSet中使用hashCode、equals方法判断是否相同，为了提高效率，先调用hashCode方法（返回hashcode值），hashCode相同的才调用equals方法判断是否相同。</strong></p>
+<h4 id="为何使用hashcode">为何使用hashCode：</h4>
+<ul>
+<li>在元素数量大的情况下，大大提高检索的效率</li>
+<li>只有用到Hashtable、HashMap、HashSet、LinkedHashMap等时才要注意hashcode方法</li>
+</ul>
+<h4 id="对hashcode方法的要求">对hashCode方法的要求</h4>
+<p>如果一个类要实现hashCode，必须和equals方法一块实现。hashCode方法和equals方法返回值的关系满足：</p>
+<ul>
+<li>equals()为true的两个对象，hashcode()返回值一定相等、</li>
+<li>equals()不为true的两个对象，它们的hashCode()不一定相等。<br>
+即equals()不为true的两个对象，hashCode()有可能相等。（哈希码在生成的时候可能产生冲突）</li>
+<li>hashCode()不等的两个对象，equals()不为true ；hashCode()相等，equals()可能为true ，也可能不为true</li>
+</ul>
+<h4 id="hashcode方法的重写">hashCode方法的重写</h4>
+<p>方法1：返回一个result</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">hashCode</span><span class="o">()</span> <span class="o">{</span>
+<span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">17</span><span class="o">;</span>  <span class="c1">//任意素数
+</span><span class="c1"></span><span class="n">result</span> <span class="o">=</span> <span class="n">31</span><span class="o">*</span><span class="n">result</span> <span class="o">+</span><span class="n">c1</span><span class="o">;</span>    <span class="c1">//c1、c2：类的成员
+</span><span class="c1"></span><span class="n">result</span> <span class="o">=</span> <span class="n">31</span><span class="o">*</span><span class="n">result</span> <span class="o">+</span><span class="n">c2</span><span class="o">;</span>
+<span class="err">……</span>
+<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><figure style="flex-grow: 183; flex-basis: 439px">
+		<a href="/p/2021/06/%E5%AE%B9%E5%99%A8/2021-06-11-12-57-54.png" data-size="775x423"><img src="/p/2021/06/%E5%AE%B9%E5%99%A8/2021-06-11-12-57-54.png"
+				srcset="/p/2021/06/%E5%AE%B9%E5%99%A8/2021-06-11-12-57-54_hu3bd12a3db7a0c54d15b31185042427ef_105924_480x0_resize_box_2.png 480w, /p/2021/06/%E5%AE%B9%E5%99%A8/2021-06-11-12-57-54_hu3bd12a3db7a0c54d15b31185042427ef_105924_1024x0_resize_box_2.png 1024w"
+				width="775"
+				height="423"
+				loading="lazy"
+				>
+		</a>
+		
+	</figure></p>
+<!-- raw HTML omitted -->
+<h4 id="treeset">TreeSet</h4>
+<p>实现了Set接口，是Set的一个变体，是一个实现了排序功能的集合（类似于“插入排序”）。<br>
+工作原理：将对象元素添加到TreeSet中时会自动按照某种比较规则，将其插入到有序的对象序列中，以保证TreeSet集合元素组成的对象序列时刻按照“升序”排列；如果没指定排序规则，则会按照对象的hash编码来排序。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/2021/06/%E5%B8%B8%E7%94%A8%E7%B1%BB/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">常用类</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/2021/05/java%E7%AC%94%E8%AE%B0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java笔记</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/2021/03/%E6%96%B9%E6%B3%95%E7%9A%84%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">方法的动态参数列表</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/2021/02/java%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java中的异常处理</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/2021/02/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%AC%94%E8%AE%B0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java面向对象笔记</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Dr.Ink的小站
+    </section>
+    
+    <section class="powerby">
+        
+            自言自语 <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
