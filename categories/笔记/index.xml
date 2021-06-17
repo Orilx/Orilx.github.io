@@ -8,11 +8,11 @@
     <language>zh-cn</language>
     <lastBuildDate>Fri, 11 Jun 2021 13:09:38 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>容器</title>
-      <link>https://orilx.gitee.io/p/2021/06/%E5%AE%B9%E5%99%A8/</link>
+      <title>Java容器</title>
+      <link>https://orilx.gitee.io/p/2021/06/java%E5%AE%B9%E5%99%A8/</link>
       <pubDate>Fri, 11 Jun 2021 13:09:38 +0800</pubDate>
       
-      <guid>https://orilx.gitee.io/p/2021/06/%E5%AE%B9%E5%99%A8/</guid>
+      <guid>https://orilx.gitee.io/p/2021/06/java%E5%AE%B9%E5%99%A8/</guid>
       <description>容器类 Java里提供好的可用的数据结构
 一系列不同功能的 由Java类库提供的用于管理对象的类
 都放在Java.util包里
