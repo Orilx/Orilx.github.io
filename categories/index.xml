@@ -6,31 +6,49 @@
     <description>Recent content in Categories on Dr.Ink的小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 11 Jun 2021 13:09:38 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Jun 2021 01:38:05 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java</title>
       <link>https://orilx.gitee.io/categories/java/</link>
-      <pubDate>Fri, 11 Jun 2021 13:09:38 +0800</pubDate>
+      <pubDate>Sun, 27 Jun 2021 01:38:05 +0800</pubDate>
       
       <guid>https://orilx.gitee.io/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>笔记</title>
-      <link>https://orilx.gitee.io/categories/%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Fri, 11 Jun 2021 13:09:38 +0800</pubDate>
+      <title>pta记录</title>
+      <link>https://orilx.gitee.io/categories/pta%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 27 Jun 2021 01:38:05 +0800</pubDate>
       
-      <guid>https://orilx.gitee.io/categories/%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://orilx.gitee.io/categories/pta%E8%AE%B0%E5%BD%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mirai</title>
+      <link>https://orilx.gitee.io/categories/mirai/</link>
+      <pubDate>Sat, 26 Jun 2021 00:44:22 +0800</pubDate>
+      
+      <guid>https://orilx.gitee.io/categories/mirai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>胡乱记记</title>
       <link>https://orilx.gitee.io/categories/%E8%83%A1%E4%B9%B1%E8%AE%B0%E8%AE%B0/</link>
-      <pubDate>Wed, 26 May 2021 00:51:18 +0000</pubDate>
+      <pubDate>Sat, 26 Jun 2021 00:44:22 +0800</pubDate>
       
       <guid>https://orilx.gitee.io/categories/%E8%83%A1%E4%B9%B1%E8%AE%B0%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>笔记</title>
+      <link>https://orilx.gitee.io/categories/%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Mar 2021 22:50:31 +0000</pubDate>
+      
+      <guid>https://orilx.gitee.io/categories/%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     

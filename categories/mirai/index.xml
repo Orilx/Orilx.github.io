@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mirai on Dr.Ink的小站</title>
+    <link>https://orilx.gitee.io/categories/mirai/</link>
+    <description>Recent content in Mirai on Dr.Ink的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 26 Jun 2021 00:44:22 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/mirai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mirai机器人开发记录</title>
+      <link>https://orilx.gitee.io/p/2021/06/mirai%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 26 Jun 2021 00:44:22 +0800</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/06/mirai%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</guid>
+      <description>缘起 [数据删除]
+计划实现功能：
+   功能 命令 完成     搜歌 COMMAND_MUSIC    帮助文档 COMMAND_HELP    在线编译 COMMAND_COMPLIE    翻译 COMMAND_TRANSLATE    特殊事件 COMMAND_FOR_FUN    拍一拍事件 null [x]   上线提醒 null [x]   ···      起步 准备 安装IDEA，安装插件Mirai Console。新建项目，在左侧栏中选择Mirai，下一步，修改参数，继续下一步
+ 
+稍等片刻，等待Gradle下载好相关文件（可以在配置文件里填上需要的依赖库）
+项目生成后，在左侧栏里找到Test/kotlin/RunTerminal.kt,填上要QQ号和密码，方便稍后测试
+   至此准备阶段完成
+编写 </description>
+    </item>
+    
+  </channel>
+</rss>

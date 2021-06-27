@@ -13,7 +13,7 @@
 <meta name="twitter:title" content="碎碎念">
 <meta name="twitter:description" content="周记"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://orilx.gitee.io/img/0.0.jpg' />
-    <link rel="shortcut icon" href="img/hash.svg" />
+    <link rel="shortcut icon" href="/hash.svg" />
 
     </head>
     <body class="article-page keep-sidebar">
@@ -38,7 +38,7 @@
             document.body.dataset.scheme = 'light';
         }
     })();
-</script><div class="container main-container flex on-phone--column compact ">
+</script><div class="container main-container flex on-phone--column extended ">
             <aside class="sidebar left-sidebar sticky">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
@@ -207,7 +207,28 @@
 </header>
 
     <section class="article-content">
-    <h2 id="第十三周">第十三周</h2>
+    <h2 id="第十七周">第十七周</h2>
+<p>装上Windows 11泄露版试了试<br>
+挺漂亮的<br>
+发布会有点水（45分钟的发布会第一次见）</p>
+<p>稍微深入地了解了一下Mirai<br>
+成功实现拍一拍自动回复（超简单的操作(￣﹃￣)）
+准备暑假写出来一个有比较完整功能的机器人<br>
+（flag🏳）</p>
+<p>稍微学了一点正则表达式<br>
+挺好用的</p>
+<p>Java实验<br>
+果不其然又寄了<br>
+≡(▔﹏▔)≡</p>
+<p>又到期末了<br>
+还没开始复习<br>
+估计又要重蹈上学期覆辙</p>
+<p>体育考试<br>
+老师网开一面<br>
+估计能及格</p>
+<h2 id="第周">第？？周</h2>
+<p>[数据删除]</p>
+<h2 id="第十三周">第十三周</h2>
 <p>方舟设定集发货延期了<br>
 希望放假之前能到</p>
 <p>互批上周末的Java作业<br>
@@ -485,6 +506,47 @@ RMB -300</p>
 </article>
      
         
+    <script src="https://utteranc.es/client.js" 
+        repo="Orilx/Orilx.github.io"
+        issue-term="pathname"
+        
+        label="comment"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.body.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
     
 
     <footer class="site-footer">

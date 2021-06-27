@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pta记录 on Dr.Ink的小站</title>
+    <link>https://orilx.gitee.io/categories/pta%E8%AE%B0%E5%BD%95/</link>
+    <description>Recent content in pta记录 on Dr.Ink的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 27 Jun 2021 01:38:05 +0800</lastBuildDate><atom:link href="https://orilx.gitee.io/categories/pta%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>约瑟夫环问题</title>
+      <link>https://orilx.gitee.io/p/2021/06/%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 27 Jun 2021 01:38:05 +0800</pubDate>
+      
+      <guid>https://orilx.gitee.io/p/2021/06/%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98/</guid>
+      <description>问题描述 约瑟夫环是一个数学的应用问题：已知n个人（以编号a，b，c&amp;hellip;分别表示）围坐在一张圆桌周围。从编号为1的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依此规律重复下去，直到圆桌周围的人全部出列。
+输入格式: 固定为2行，第一行为m，第二行为n个人的名称列表，用英文字母代表，元素直接使用英文逗号,分开
+输出格式: 一行，为出列元素序列，元素之间使用英文逗号,分开【注意：末尾元素后没有逗号】
+输入样例: 在这里给出一组输入。例如：
+3 a,b,c,d,e,f,g 输出样例: 在这里给出相应的输出。例如：
+c,f,b,g,e,a,d 参考解法 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60  import java.</description>
+    </item>
+    
+  </channel>
+</rss>

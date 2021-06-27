@@ -13,7 +13,7 @@
 <meta name="twitter:title" content="Hello World!">
 <meta name="twitter:description" content="你好，世界"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://orilx.gitee.io/img/0.0.jpg' />
-    <link rel="shortcut icon" href="img/hash.svg" />
+    <link rel="shortcut icon" href="/hash.svg" />
 
     </head>
     <body class="">
@@ -38,7 +38,7 @@
             document.body.dataset.scheme = 'light';
         }
     })();
-</script><div class="container main-container flex on-phone--column compact article-page with-toolbar">
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
             <aside class="sidebar left-sidebar sticky">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
@@ -184,8 +184,16 @@
         </a>
     </div>
 
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/2021/02/hello-world/">
+                
+                    <img src="/img/0.0.jpg" loading="lazy" alt="Featured image of post Hello World!" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -280,6 +288,47 @@ hexo博客又崩了<br>
 
     
         
+    <script src="https://utteranc.es/client.js" 
+        repo="Orilx/Orilx.github.io"
+        issue-term="pathname"
+        
+        label="comment"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.body.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
     
 
     <footer class="site-footer">
