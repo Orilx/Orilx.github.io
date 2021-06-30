@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='菜鸡'><title>Tag: 笔记 - Dr.Ink的小站</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='未完待续'><title>正则表达式入门</title>
 
-<link rel='canonical' href='https://orilx.gitee.io/tags/%E7%AC%94%E8%AE%B0/'>
+<link rel='canonical' href='https://orilx.gitee.io/p/2021/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A5%E9%97%A8/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Tag: 笔记 - Dr.Ink的小站'>
-<meta property='og:description' content='菜鸡'>
-<meta property='og:url' content='https://orilx.gitee.io/tags/%E7%AC%94%E8%AE%B0/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='正则表达式入门'>
+<meta property='og:description' content='未完待续'>
+<meta property='og:url' content='https://orilx.gitee.io/p/2021/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A5%E9%97%A8/'>
 <meta property='og:site_name' content='Dr.Ink的小站'>
-<meta property='og:type' content='article'><meta property='article:section' content='Tags' /><meta property='og:image' content='https://orilx.gitee.io/img/0.0.jpg' />
-<meta name="twitter:title" content="Tag: 笔记 - Dr.Ink的小站">
-<meta name="twitter:description" content="菜鸡"><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='正则表达式' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2021-06-30T23:29:50&#43;08:00'/><meta property='article:modified_time' content='2021-06-30T23:29:50&#43;08:00'/><meta property='og:image' content='https://orilx.gitee.io/img/0.0.jpg' />
+<meta name="twitter:title" content="正则表达式入门">
+<meta name="twitter:description" content="未完待续"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://orilx.gitee.io/img/0.0.jpg' />
     <link rel="shortcut icon" href="/hash.svg" />
 
     </head>
-    <body class="article-page keep-sidebar">
+    <body class="">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -38,7 +38,7 @@
             document.body.dataset.scheme = 'light';
         }
     })();
-</script><div class="container main-container flex on-phone--column extended ">
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
             <aside class="sidebar left-sidebar sticky">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
@@ -171,26 +171,210 @@
 </aside>
 
             <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://orilx.gitee.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
     <article class="main-article">
     <header class="article-header">
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/java/" style="background-color: #D59313; color: #fff;">
+                Java
+            </a>
+        
+    </header>
+    
 
     <h2 class="article-title">
-        <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+        <a href="/p/2021/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A5%E9%97%A8/">正则表达式入门</a>
     </h2>
 
-    </div>
+    
+    <h3 class="article-subtitle">
+        未完待续
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jun 30, 2021</time>
+    </footer></div>
 </header>
 
     <section class="article-content">
-    
+    <p>[未完待续]<br>
+发现很多实验课上的题用正则表达式解决起来很舒服，所以记录一下</p>
+<h2 id="元字符">元字符</h2>
+<p>元字符是正则表达式的一种基本元素 </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.</td>
+<td style="text-align:center">匹配除换行符以外的字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\w</td>
+<td style="text-align:center">匹配字母/数字/下划线/汉字（我猜是所有非空白符）</td>
+</tr>
+<tr>
+<td style="text-align:center">\s</td>
+<td style="text-align:center">匹配任意的空白符</td>
+</tr>
+<tr>
+<td style="text-align:center">\d</td>
+<td style="text-align:center">匹配数字</td>
+</tr>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">匹配单词的开始或结束</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">匹配字符串的开始</td>
+</tr>
+<tr>
+<td style="text-align:center">$</td>
+<td style="text-align:center">匹配字符串的结束</td>
+</tr>
+</tbody>
+</table>
+<h2 id="重复限定符">重复限定符</h2>
+<p>为处理表达式中的重复问题，使用重复限定符 </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">?</td>
+<td style="text-align:center">重复零次或一次</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">重复零次或多次</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">重复一次或多次</td>
+</tr>
+<tr>
+<td style="text-align:center">{n}</td>
+<td style="text-align:center">重复n次</td>
+</tr>
+<tr>
+<td style="text-align:center">{n,}</td>
+<td style="text-align:center">重复n次或更多次</td>
+</tr>
+<tr>
+<td style="text-align:center">{n,m}</td>
+<td style="text-align:center">重复n到m次</td>
+</tr>
+</tbody>
+</table>
+<h2 id="实例提取邮箱">实例：提取邮箱</h2>
+<p>表达式实现：</p>
+<pre><code>(\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*)
+</code></pre><p>Java代码参考：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.regex.Matcher</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.regex.Pattern</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+        <span class="n">String</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s">&#34;(\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*)&#34;</span><span class="o">;</span>
+        <span class="n">Pattern</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">pattern</span><span class="o">);</span>
+        <span class="n">Matcher</span> <span class="n">m</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
+        <span class="k">while</span><span class="o">(!</span><span class="n">m</span><span class="o">.</span><span class="na">hitEnd</span><span class="o">()){</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="na">find</span><span class="o">()){</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="na">group</span><span class="o">()</span> <span class="o">+</span> <span class="s">&#34;;&#34;</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>输入：</p>
+<blockquote>
+<p>丽丽/13539870198/lili@qq.com,天梯/13408791122/tiant@qq.com,楠楠/13112034567/nn@qq.com</p>
+</blockquote>
+<p>输出：</p>
+<blockquote>
+<p><a href="mailto:lili@qq.com">lili@qq.com</a>;tiant@qq.com;nn@qq.com</p>
+</blockquote>
+<p>参考:<br>
+<a class="link" href="https://juejin.cn/post/6844903677119954958"  target="_blank" rel="noopener"
+    >正则表达式真的很骚，可惜你不会写！！！</a><br>
+<a class="link" href="https://www.runoob.com/java/java-regular-expressions.html"  target="_blank" rel="noopener"
+    >Java 正则表达式</a><br>
+<a class="link" href="https://www.runoob.com/w3cnote/regular-expression-30-minutes-tutorial.html"  target="_blank" rel="noopener"
+    >正则表达式30分钟入门教程</a></p>
+
 </section>
 
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+        
+            <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -208,48 +392,31 @@
 
     
 </article>
-     
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/2021/06/%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98/">
         
-    <script src="https://utteranc.es/client.js" 
-        repo="Orilx/Orilx.github.io"
-        issue-term="pathname"
         
-        label="comment"
-        
-        crossorigin="anonymous"
-        async
-        >
-</script>
 
-<style>
-    .utterances {
-        max-width: unset;
-    }
-</style>
+        <div class="article-details">
+            <h2 class="article-title">约瑟夫环问题</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
 
-<script>
-    function setUtterancesTheme(theme) {
-        let utterances = document.querySelector('.utterances iframe');
-        if (utterances) {
-            utterances.contentWindow.postMessage(
-                {
-                    type: 'set-theme',
-                    theme: `github-${theme}`
-                },
-                'https://utteranc.es'
-            );
-        }
-    }
-
-    addEventListener('message', event => {
-        if (event.origin !== 'https://utteranc.es') return;
-        setUtterancesTheme(document.body.dataset.scheme)
-    });
-
-    window.addEventListener('onColorSchemeChange', (e) => {
-        setUtterancesTheme(e.detail)
-    })
-</script>
 
     
 
@@ -267,8 +434,6 @@
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
-
-    
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     
@@ -345,7 +510,6 @@
                 rel="stylesheet" 
                 href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
             >
-
             </main>
         </div>
         <script 
